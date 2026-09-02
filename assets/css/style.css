@@ -283,12 +283,12 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
   gap: 4rem; list-style: none; margin: 0; padding: 2.8rem 0;
 }
-.logos img { height: 46px; width: auto; opacity: .85; }
-.logos img.is-tall { height: 78px; }
+.logos img { height: 62px; width: auto; opacity: .9; }
+.logos img.is-tall { height: 104px; }
 @media (max-width: 640px) {
   .logos { gap: 2rem; padding: 2rem 0; }
-  .logos img { height: 34px; }
-  .logos img.is-tall { height: 56px; }
+  .logos img { height: 44px; }
+  .logos img.is-tall { height: 74px; }
 }
 
 /* ----------------------------------------------------------------- CTA --- */
