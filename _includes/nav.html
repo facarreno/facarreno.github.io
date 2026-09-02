@@ -1,0 +1,40 @@
+{% assign t = site.data[page.lang] %}
+{% if page.lang == 'en' %}
+  {% assign u_home = '/en/' %}
+  {% assign u_res  = '/en/research/' %}
+  {% assign u_pub  = '/en/publications/' %}
+  {% assign u_tea  = '/en/teaching/' %}
+  {% assign u_cv   = '/en/cv/' %}
+  {% assign u_con  = '/en/contact/' %}
+{% else %}
+  {% assign u_home = '/' %}
+  {% assign u_res  = '/investigacion/' %}
+  {% assign u_pub  = '/publicaciones/' %}
+  {% assign u_tea  = '/docencia/' %}
+  {% assign u_cv   = '/cv/' %}
+  {% assign u_con  = '/contacto/' %}
+{% endif %}
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="{{ t.nav.home }}">
+      <a class="nav__brand" href="{{ u_home | relative_url }}">
+        Felipe A. Carreño López
+        <span>{% if page.lang == 'en' %}{{ site.tagline_en }}{% else %}{{ site.tagline_es }}{% endif %}</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="{{ u_res | relative_url }}" {% if page.url contains 'investigacion' or page.url contains 'research' %}class="is-active"{% endif %}>{{ t.nav.research }}</a></li>
+        <li><a href="{{ u_pub | relative_url }}" {% if page.url contains 'publica' %}class="is-active"{% endif %}>{{ t.nav.publications }}</a></li>
+        <li><a href="{{ u_tea | relative_url }}" {% if page.url contains 'docencia' or page.url contains 'teaching' %}class="is-active"{% endif %}>{{ t.nav.teaching }}</a></li>
+        <li><a href="{{ u_cv | relative_url }}" {% if page.url contains '/cv' %}class="is-active"{% endif %}>{{ t.nav.cv }}</a></li>
+        <li><a href="{{ u_con | relative_url }}" {% if page.url contains 'contact' %}class="is-active"{% endif %}>{{ t.nav.contact }}</a></li>
+        <li><a class="nav__lang" href="{{ page.alt | default: u_home | relative_url }}" hreflang="{% if page.lang == 'es' %}en{% else %}es{% endif %}">{{ t.ui.lang_switch_code }}</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

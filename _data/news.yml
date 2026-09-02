@@ -1,0 +1,57 @@
+# Novedades. Las más recientes primero. Formato de fecha: YYYY-MM-DD
+- date: 2026-05-19
+  tag:
+    es: "Congreso"
+    en: "Conference"
+  title:
+    es: "Póster en InterPore 2026, Nantes"
+    en: "Poster at InterPore 2026, Nantes"
+  body:
+    es: "Presentación de *Living porous media: uncovering the microbe–fluid–rock interactions that reshape subsurface transport* en el congreso anual de InterPore, Université de Nantes."
+    en: "Presented *Living porous media: uncovering the microbe–fluid–rock interactions that reshape subsurface transport* at the InterPore annual meeting, Université de Nantes."
+
+- date: 2026-03-01
+  tag:
+    es: "Publicación"
+    en: "Publication"
+  title:
+    es: "Nuevo artículo en *Biodegradation*"
+    en: "New article in *Biodegradation*"
+  body:
+    es: "*Enhancing sulfur-based denitrification with natural zeolite*, en colaboración con el grupo del Dr. César Huiliñir."
+    en: "*Enhancing sulfur-based denitrification with natural zeolite*, with Dr. César Huiliñir's group."
+  link: "https://doi.org/10.1007/s10532-026-10352-4"
+
+- date: 2026-01-15
+  tag:
+    es: "Publicación"
+    en: "Publication"
+  title:
+    es: "Nuevo artículo en *Biochemical Engineering Journal*"
+    en: "New article in *Biochemical Engineering Journal*"
+  body:
+    es: "Modelación seccional híbrida de la hidrodinámica en fase gas de biofiltros percoladores y el efecto del material de relleno sobre las distribuciones de tiempo de residencia."
+    en: "Hybrid section-based modelling of gas-phase hydrodynamics in biotrickling filters and the effect of packing material on residence time distributions."
+  link: "https://doi.org/10.1016/j.bej.2025.110049"
+
+- date: 2025-10-27
+  tag:
+    es: "Congreso"
+    en: "Conference"
+  title:
+    es: "XXII Congreso Chileno de Ingeniería Química"
+    en: "XXII Chilean Congress of Chemical Engineering"
+  body:
+    es: "Póster y presentación oral sobre la simulación CFD de un biofiltro de lecho empacado con azufre elemental, PUCV, Valparaíso."
+    en: "Poster and oral presentation on CFD simulation of an elemental sulfur packed-bed biofilter, PUCV, Valparaíso."
+
+- date: 2025-04-01
+  tag:
+    es: "Proyecto"
+    en: "Grant"
+  title:
+    es: "Adjudicación del Fondecyt de Postdoctorado N.º 3250412"
+    en: "Fondecyt Postdoctoral Grant No. 3250412 awarded"
+  body:
+    es: "Proyecto 2025–2028 sobre dinámica de biopelículas y azufre elemental en reactores de lecho fijo para desnitrificación autótrofa de aguas subterráneas, como Investigador Responsable."
+    en: "2025–2028 project on biofilm and elemental sulfur dynamics in fixed-bed reactors for autotrophic denitrification of groundwater, as Principal Investigator."

@@ -1,0 +1,76 @@
+lecturer:
+  - name:
+      es: "Diseño Avanzado de Reactores Químicos y Bioquímicos"
+      en: "Advanced Design of Chemical and Biochemical Reactors"
+    institution: "Universidad de los Andes"
+    period: "2022–2026"
+    note:
+      es: "Dictado en 5 oportunidades (2S 2022, 2S 2023, 2S 2024, 2S 2025, 1S 2026)"
+      en: "Taught 5 times (2022–2026)"
+    level:
+      es: "Pregrado"
+      en: "Undergraduate"
+
+  - name:
+      es: "Modelación de Fluidos"
+      en: "Fluid Modelling"
+    institution: "Universidad de los Andes"
+    period: "2023–2024"
+    note:
+      es: "Dictado en 2 oportunidades (1S 2023, 1S 2024)"
+      en: "Taught twice (2023, 2024)"
+    level:
+      es: "Pregrado"
+      en: "Undergraduate"
+
+  - name:
+      es: "Simulación CFD de Flujos Multifásicos"
+      en: "CFD Simulation of Multiphase Flows"
+    institution: "Universidad de los Andes"
+    period: "2022"
+    note:
+      es: ""
+      en: ""
+    level:
+      es: "Posgrado"
+      en: "Graduate"
+
+  - name:
+      es: "Mecánica de Fluidos"
+      en: "Fluid Mechanics"
+    institution: "Universidad Andrés Bello"
+    period: "2023–2024"
+    note:
+      es: "Profesor de laboratorio. Dictado en 2 oportunidades (1S 2023, 1S 2024)"
+      en: "Laboratory instructor. Taught twice (2023, 2024)"
+    level:
+      es: "Pregrado"
+      en: "Undergraduate"
+
+assistant:
+  - name:
+      es: "Simulación"
+      en: "Simulation"
+    institution: "Universidad de los Andes"
+    period: "2018–2019"
+    note:
+      es: "Dictado en 3 oportunidades"
+      en: "Taught 3 times"
+
+  - name:
+      es: "Soluciones Numéricas de Problemas de Ingeniería Ambiental"
+      en: "Numerical Solutions of Environmental Engineering Problems"
+    institution: "Universidad de los Andes"
+    period: "2020"
+    note:
+      es: ""
+      en: ""
+
+  - name:
+      es: "Introducción a la Modelación de Flujos Turbulentos"
+      en: "Introduction to Turbulent Flow Modelling"
+    institution: "Universidad de los Andes"
+    period: "2020"
+    note:
+      es: ""
+      en: ""

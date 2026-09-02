@@ -1,0 +1,58 @@
+---
+layout: default
+---
+{% assign t = site.data[page.lang] %}
+{% assign L = page.lang %}
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>{{ t.publications.title }}</h1>
+    <p>{{ t.publications.lead }}</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    {% assign note = t.publications.metrics_note | replace: '{h}', site.metrics.h_index | replace: '{c}', site.metrics.citations | replace: '{n}', site.metrics.wos_docs %}
+    <p class="note">{{ note }} · <a href="https://orcid.org/{{ site.author.orcid }}" rel="noopener">ORCID {{ site.author.orcid }}</a></p>
+
+    <p class="subhead">{{ t.publications.indexed }}</p>
+    <ul class="pub-list">
+      {% for p in site.data.publications.indexed %}{% include pub-item.html pub=p %}{% endfor %}
+    </ul>
+
+    <p class="subhead">{{ t.publications.inprep }}</p>
+    <ul class="pub-list">
+      {% for p in site.data.publications.in_preparation %}{% include pub-item.html pub=p %}{% endfor %}
+    </ul>
+
+    <p class="subhead">{{ t.publications.patents }}</p>
+    <ul class="pub-list">
+      {% for p in site.data.publications.patents %}
+      {% assign authors = p.authors | replace: "Carreño, F. A.", "<b>Carreño, F. A.</b>" %}
+      <li class="pub">
+        <div class="pub__year">—</div>
+        <div>
+          <h3 class="pub__title">{{ p.title[L] }}</h3>
+          <p class="pub__authors">{{ authors }}</p>
+          <p class="pub__meta">{{ p.details }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p class="subhead">{{ t.publications.conferences }}</p>
+    <ul class="pub-list">
+      {% for c in site.data.publications.conferences %}
+      <li class="pub">
+        <div class="pub__year">{{ c.year }}</div>
+        <div>
+          <h3 class="pub__title">{{ c.contribution }}</h3>
+          <p class="pub__authors">{{ c.name }} · {{ c.venue }}</p>
+          <p class="pub__meta">{{ c.date[L] }}<span class="pub__badge">{{ c.type[L] }}</span></p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

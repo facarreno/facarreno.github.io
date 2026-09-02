@@ -1,0 +1,139 @@
+# Cadenas de interfaz — español
+nav:
+  home: "Inicio"
+  research: "Investigación"
+  publications: "Publicaciones"
+  teaching: "Docencia"
+  cv: "CV"
+  contact: "Contacto"
+
+home:
+  hero_kicker: "Universidad de los Andes · Santiago, Chile"
+  hero_title: "Simulación computacional para entender y diseñar procesos ambientales"
+  hero_lead: >-
+    Uso dinámica de fluidos computacional (CFD) e imagen digital para abrir la
+    caja negra de los biorreactores: cómo fluye el gas y el líquido, cómo crece
+    la biopelícula y cómo eso determina el rendimiento de un proceso de
+    tratamiento.
+  hero_cta_research: "Ver líneas de investigación"
+  hero_cta_cv: "Descargar CV"
+
+  about_title: "Sobre mí"
+  about_body: >-
+    Soy Doctor en Ciencias de la Ingeniería (*Summa cum laude*) e Ingeniero Civil
+    Químico, y actualmente investigador postdoctoral en la Universidad de los
+    Andes. Dirijo, como Investigador Responsable, el **Fondecyt de Postdoctorado
+    N.º 3250412** (2025–2028), dedicado a caracterizar la dinámica de las
+    biopelículas y del azufre elemental en reactores de lecho fijo para la
+    desnitrificación autótrofa de aguas subterráneas.
+
+
+    A lo largo de mi carrera he aplicado estas herramientas a problemas muy
+    distintos —biofiltración de gases contaminantes, biorremediación de suelos,
+    simulación multifásica de materiales cementicios— y esa multidisciplina es
+    la que ha guiado mi trabajo y mis colaboraciones internacionales con la
+    Universidad de California, Davis y la Universidad de Valladolid.
+
+
+    Mi proyección es consolidar una línea propia orientada a construir **gemelos
+    digitales** de reactores a partir de simulaciones CFD, y extender más
+    adelante estas herramientas al estudio de sistemas acuáticos naturales.
+
+  metrics_title: "En números"
+  metric_h: "Índice h (WoS)"
+  metric_funding: "Fondos adjudicados"
+  metric_citations: "Citas"
+  metric_wos: "Artículos indexados"
+  metric_theses: "Tesis dirigidas"
+
+  research_title: "Líneas de investigación"
+  research_lead: "Tres preguntas que atraviesan todo lo que hago."
+  research_more: "Conocer la línea"
+
+  pubs_title: "Publicaciones seleccionadas"
+  pubs_all: "Ver todas las publicaciones"
+
+  news_kicker: "Al día"
+  news_title: "Novedades"
+  news_all: "Ver todas"
+
+  collab_kicker: "Red"
+  collab_title: "Colaboraciones y redes"
+  funding_title: "Financiamiento"
+
+research:
+  title: "Investigación"
+  lead: >-
+    Mi trabajo conecta la mecánica de fluidos computacional con la biología de
+    los reactores: simular lo que ocurre dentro del lecho para poder diseñarlo
+    mejor.
+  current_title: "Proyecto en curso"
+  methods_kicker: "Método"
+  methods_title: "Cómo trabajo"
+  methods_lead: >-
+    Herramientas y enfoques que uso de forma transversal en todas las líneas.
+
+publications:
+  title: "Publicaciones"
+  lead: "Artículos indexados en Web of Science, manuscritos en preparación, patentes y presentaciones en congresos."
+  indexed: "Artículos en revistas indexadas (WoS)"
+  inprep: "Artículos en preparación"
+  patents: "Patentes"
+  conferences: "Congresos"
+  metrics_note: "Índice h: {h} · {c} citas · {n} documentos indexados (WoS)"
+
+teaching:
+  title: "Docencia"
+  lead: >-
+    Enseño modelación y simulación en ingeniería, y dirijo tesis de pregrado y
+    magíster en el cruce entre CFD y procesos ambientales.
+  philosophy_title: "Cómo entiendo la docencia"
+  courses_kicker: "Aula"
+  courses_title: "Cursos"
+  courses_lead_prof: "Profesor responsable"
+  courses_lead_ta: "Ayudantías"
+  theses_kicker: "Estudiantes"
+  theses_title: "Tesis dirigidas"
+  theses_lead: "Estudiantes que he guiado o co-guiado."
+  theses_current: "En curso"
+  theses_past: "Finalizadas"
+  join_title: "¿Quieres hacer tu tesis conmigo?"
+  join_body: >-
+    Busco estudiantes de Ingeniería Civil Química, Ambiental o afines con
+    interés en simulación numérica, tratamiento de aguas o procesos biológicos.
+    No necesitas experiencia previa en CFD: sí curiosidad y disposición a
+    programar. Escríbeme con una breve descripción de lo que te interesa.
+  join_cta: "Escríbeme"
+
+cv:
+  title: "Curriculum Vitae"
+  lead: "Versión completa en PDF y resumen de trayectoria."
+  download_es: "Descargar CV (español)"
+  download_en: "Download CV (English)"
+  education: "Educación"
+  experience: "Experiencia"
+  funding: "Fondos adjudicados"
+  awards: "Premios y reconocimientos"
+  skills: "Habilidades"
+  role: "Rol"
+
+contact:
+  title: "Contacto"
+  lead: >-
+    Escríbeme si te interesa colaborar, hacer una tesis, o discutir simulación
+    de reactores.
+  email_label: "Correo"
+  office_label: "Oficina"
+  office: "Facultad de Ingeniería y Ciencias Aplicadas, Universidad de los Andes, Santiago, Chile"
+
+ui:
+  lang_switch: "English"
+  lang_switch_code: "EN"
+  read_more: "Leer más"
+  present: "Presente"
+  supervisor: "Guía"
+  cosupervisor: "Co-guía"
+  explore: "Explorar"
+  back_home: "Volver al inicio"
+  updated: "Última actualización"
+  skip: "Saltar al contenido"

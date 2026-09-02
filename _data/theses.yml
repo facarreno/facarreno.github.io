@@ -1,0 +1,91 @@
+# Tesis dirigidas. status: current | past
+- student: "Cristóbal Núñez"
+  program:
+    es: "Ingeniería Civil Química"
+    en: "Chemical Engineering"
+  role: cosupervisor
+  advisor: "Dr. César Huiliñir"
+  title:
+    es: "Efecto de la presencia de contaminantes emergentes en el proceso de desnitrificación autótrofa en biofiltros aplicados al tratamiento de aguas subterráneas"
+    en: "Effect of emerging contaminants on autotrophic denitrification in biofilters for groundwater treatment"
+  institution: "Universidad de los Andes"
+  period: "2026 –"
+  status: current
+
+- student: "Santiago Vila"
+  program:
+    es: "Ingeniería Civil Química"
+    en: "Chemical Engineering"
+  role: cosupervisor
+  advisor: "Dr. César Huiliñir"
+  title:
+    es: "Puesta en marcha y evaluación operacional de un biofiltro desnitrificante autótrofo con azufre elemental para la remoción de nitrato en aguas subterráneas"
+    en: "Start-up and operational assessment of an elemental sulfur autotrophic denitrifying biofilter for nitrate removal from groundwater"
+  institution: "Universidad de los Andes"
+  period: "2025–2026"
+  status: current
+
+- student: "Samuel Abogabir Schacht"
+  program:
+    es: "Ingeniería Civil Ambiental"
+    en: "Environmental Engineering"
+  role: supervisor
+  advisor: "Dr. César Huiliñir"
+  title:
+    es: "Desarrollo y validación experimental de un modelo CFD tridimensional para un reactor de lecho fijo aplicado a la desnitrificación autótrofa con azufre elemental mediante análisis de distribución de tiempos de residencia"
+    en: "Development and experimental validation of a three-dimensional CFD model of a fixed-bed reactor for sulfur-based autotrophic denitrification through residence time distribution analysis"
+  institution: "Universidad de los Andes"
+  period: "2025–2026"
+  status: current
+
+- student: "Andrés Orellana Molnar"
+  program:
+    es: "Ingeniería Civil Ambiental"
+    en: "Environmental Engineering"
+  role: supervisor
+  advisor: "Dr. César Huiliñir"
+  title:
+    es: "Modelación y simulación de una biopelícula desnitrificante autótrofa con S⁰ como donador de electrones"
+    en: "Modelling and simulation of an autotrophic denitrifying biofilm with S⁰ as electron donor"
+  institution: "Universidad de los Andes"
+  period: "2025–2026"
+  status: current
+
+- student: "Amparo Melgarejo Araya"
+  program:
+    es: "Magíster en Ciencias de la Ingeniería"
+    en: "MSc in Engineering Sciences"
+  role: cosupervisor
+  advisor: "Dr. Sichem Guerrero"
+  title:
+    es: "Hidrogenación de CO₂ para la producción de metanol mediante catalizadores soportados en CeO₂ y TiO₂ con fases activas de Zn, Co y Fe"
+    en: "CO₂ hydrogenation for methanol production using CeO₂- and TiO₂-supported catalysts with Zn, Co and Fe active phases"
+  institution: "Universidad de los Andes"
+  period: "2024–2025"
+  status: past
+
+- student: "Juan Iturralde Spiniello"
+  program:
+    es: "Ingeniería Civil Ambiental"
+    en: "Environmental Engineering"
+  role: cosupervisor
+  advisor: "Dr. Felipe Scott"
+  title:
+    es: "Desarrollo de un turbidostato controlado por un sensor de densidad óptica de bajo costo, para el crecimiento y evolución de metilótrofos"
+    en: "Development of a turbidostat controlled by a low-cost optical density sensor for the growth and evolution of methylotrophs"
+  institution: "Universidad de los Andes"
+  period: "2022–2023"
+  status: past
+
+- student: "Natalia Fernández Sepúlveda"
+  program:
+    es: "Ingeniería Civil Ambiental"
+    en: "Environmental Engineering"
+  role: cosupervisor
+  advisor: "Dr. Felipe Scott"
+  title:
+    es: "Desarrollo y demostración del uso de un sistema de control de alimentación de metanol para cultivos metilotróficos en biorreactor"
+    en: "Development and demonstration of a methanol feeding control system for methylotrophic cultures in a bioreactor"
+  institution: "Universidad de los Andes"
+  period: "2022–2023"
+  status: past

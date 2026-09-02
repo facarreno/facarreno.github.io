@@ -1,0 +1,16 @@
+{% comment %} Renderiza un artículo. include pub-item.html pub=item {% endcomment %}
+{% assign p = include.pub %}
+{% assign authors = p.authors | replace: "Carreño-López, F. A.", "<b>Carreño-López, F. A.</b>" | replace: "Carreño, F. A.", "<b>Carreño, F. A.</b>" %}
+<li class="pub">
+  <div class="pub__year">{{ p.year }}</div>
+  <div>
+    <h3 class="pub__title">{{ p.title }}</h3>
+    <p class="pub__authors">{{ authors }}</p>
+    <p class="pub__meta">
+      {% if p.journal %}<span class="pub__journal">{{ p.journal }}</span>{% if p.details %}, {{ p.details }}{% endif %}{% endif %}
+      {% if p.target %}<span class="pub__journal">{{ p.target }}</span>{% endif %}
+      {% if p.quartile %}<span class="pub__badge">{{ p.quartile }}{% if p.impact %} · IF {{ p.impact }}{% endif %}</span>{% endif %}
+    </p>
+    {% if p.doi %}<a class="pub__doi" href="https://doi.org/{{ p.doi }}" rel="noopener">https://doi.org/{{ p.doi }}</a>{% endif %}
+  </div>
+</li>

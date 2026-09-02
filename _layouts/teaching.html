@@ -1,0 +1,151 @@
+---
+layout: default
+---
+{% assign t = site.data[page.lang] %}
+{% assign L = page.lang %}
+{% if L == 'en' %}{% assign u_con = '/en/contact/' %}{% else %}{% assign u_con = '/contacto/' %}{% endif %}
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>{{ t.teaching.title }}</h1>
+    <p>{{ t.teaching.lead }}</p>
+  </div>
+</div>
+
+<!-- ========================================================== FILOSOFÍA === -->
+<section class="section">
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <p class="eyebrow">{{ t.teaching.philosophy_title }}</p>
+        <dl class="about__side">
+          <dt>{% if L == 'en' %}Courses as lecturer{% else %}Cursos como responsable{% endif %}</dt>
+          <dd>{{ site.data.courses.lecturer | size }}</dd>
+          <dt>{% if L == 'en' %}Theses supervised{% else %}Tesis dirigidas{% endif %}</dt>
+          <dd>{{ site.data.theses | size }}</dd>
+          <dt>{% if L == 'en' %}Training{% else %}Formación{% endif %}</dt>
+          <dd>{% if L == 'en' %}Graduate Diploma in University Teaching (2024–2025){% else %}Diplomado en Docencia Universitaria (2024–2025){% endif %}</dd>
+        </dl>
+      </div>
+      <div class="about__body">
+        {% if L == 'en' %}
+        <p>I teach modelling and simulation subjects that many students meet with some apprehension:
+        courses where the maths, the physics and the code all arrive at once. My approach is to make
+        the model something students <em>build</em> rather than something they receive — starting from a
+        problem they can picture, and adding complexity only when the previous layer is genuinely
+        understood.</p>
+        <p>That means working with real cases, open-source tools students can keep using after the
+        course (OpenFOAM, Python), and assessment that rewards reasoning about results rather than
+        reproducing a procedure. A simulation that gives the "right" number for the wrong reason is a
+        failed simulation, and saying so out loud is part of the training.</p>
+        <p>I complemented this practice with a Graduate Diploma in University Teaching, which pushed
+        me to be more deliberate about planning, assessment design and metacognition in my courses.</p>
+        {% else %}
+        <p>Enseño asignaturas de modelación y simulación que muchos estudiantes enfrentan con cierta
+        aprensión: cursos donde llegan al mismo tiempo la matemática, la física y el código. Mi
+        enfoque es que el modelo sea algo que el estudiante <em>construye</em> y no algo que recibe:
+        partir de un problema que pueda imaginar y sumar complejidad solo cuando la capa anterior se
+        entendió de verdad.</p>
+        <p>Eso significa trabajar con casos reales, con herramientas de código abierto que pueden
+        seguir usando después del curso (OpenFOAM, Python), y con evaluaciones que premian razonar
+        sobre los resultados antes que reproducir un procedimiento. Una simulación que entrega el
+        número "correcto" por la razón equivocada es una simulación fallida, y decirlo en voz alta es
+        parte de la formación.</p>
+        <p>Complementé esta práctica con un Diplomado en Docencia Universitaria, que me empujó a ser
+        más deliberado en la planificación, el diseño de evaluaciones y la metacognición en mis
+        cursos.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= CURSOS === -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">{{ t.teaching.courses_kicker }}</p>
+      <h2>{{ t.teaching.courses_title }}</h2>
+    </div>
+
+    <p class="subhead">{{ t.teaching.courses_lead_prof }}</p>
+    <div>
+      {% for c in site.data.courses.lecturer %}
+      <div class="entry">
+        <div class="entry__head">
+          <h3 class="entry__title">{{ c.name[L] }}</h3>
+          <span class="entry__period">{{ c.period }}</span>
+        </div>
+        <p class="entry__sub">{{ c.institution }}{% if c.level %} · {{ c.level[L] }}{% endif %}{% if c.note[L] != "" %} · {{ c.note[L] }}{% endif %}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <p class="subhead">{{ t.teaching.courses_lead_ta }}</p>
+    <div>
+      {% for c in site.data.courses.assistant %}
+      <div class="entry">
+        <div class="entry__head">
+          <h3 class="entry__title">{{ c.name[L] }}</h3>
+          <span class="entry__period">{{ c.period }}</span>
+        </div>
+        <p class="entry__sub">{{ c.institution }}{% if c.note[L] != "" %} · {{ c.note[L] }}{% endif %}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== TESIS === -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">{{ t.teaching.theses_kicker }}</p>
+      <h2>{{ t.teaching.theses_title }}</h2>
+      <p>{{ t.teaching.theses_lead }}</p>
+    </div>
+
+    <p class="subhead">{{ t.teaching.theses_current }}</p>
+    {% for th in site.data.theses %}{% if th.status == 'current' %}
+    <div class="entry">
+      <div class="entry__head">
+        <h3 class="entry__title">{{ th.student }}</h3>
+        <span class="entry__period">{{ th.period }}</span>
+      </div>
+      <p class="entry__sub">
+        {% if th.role == 'supervisor' %}<span class="role-tag role-tag--main">{{ t.ui.supervisor }}</span>{% else %}<span class="role-tag role-tag--co">{{ t.ui.cosupervisor }}</span>{% endif %}
+        {{ th.program[L] }} · {{ th.institution }}{% if th.advisor %} · {{ th.advisor }}{% endif %}
+      </p>
+      <p class="entry__sub" style="margin-top:.45rem"><em>{{ th.title[L] }}</em></p>
+    </div>
+    {% endif %}{% endfor %}
+
+    <p class="subhead">{{ t.teaching.theses_past }}</p>
+    {% for th in site.data.theses %}{% if th.status == 'past' %}
+    <div class="entry">
+      <div class="entry__head">
+        <h3 class="entry__title">{{ th.student }}</h3>
+        <span class="entry__period">{{ th.period }}</span>
+      </div>
+      <p class="entry__sub">
+        {% if th.role == 'supervisor' %}<span class="role-tag role-tag--main">{{ t.ui.supervisor }}</span>{% else %}<span class="role-tag role-tag--co">{{ t.ui.cosupervisor }}</span>{% endif %}
+        {{ th.program[L] }} · {{ th.institution }}{% if th.advisor %} · {{ th.advisor }}{% endif %}
+      </p>
+      <p class="entry__sub" style="margin-top:.45rem"><em>{{ th.title[L] }}</em></p>
+    </div>
+    {% endif %}{% endfor %}
+  </div>
+</section>
+
+<!-- ================================================================ CTA === -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>{{ t.teaching.join_title }}</h2>
+        <p>{{ t.teaching.join_body }}</p>
+      </div>
+      <a class="btn btn--primary" href="{{ u_con | relative_url }}">{{ t.teaching.join_cta }}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+---
+layout: default
+---
+{% assign t = site.data[page.lang] %}
+{% assign L = page.lang %}
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>{{ t.cv.title }}</h1>
+    <p>{{ t.cv.lead }}</p>
+    <div class="hero__actions" style="margin-top:1.5rem">
+      <a class="btn btn--outline" href="{{ '/assets/cv/Felipe_Carreno_CV_ES.pdf' | relative_url }}">{{ t.cv.download_es }}</a>
+      <a class="btn btn--outline" href="{{ '/assets/cv/Felipe_Carreno_CV_EN.pdf' | relative_url }}">{{ t.cv.download_en }}</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+
+    <p class="subhead">{{ t.cv.education }}</p>
+    {% for e in site.data.cv.education %}
+    <div class="entry">
+      <div class="entry__head">
+        <h3 class="entry__title">{{ e.degree[L] }}</h3>
+        <span class="entry__period">{{ e.period }}</span>
+      </div>
+      <p class="entry__sub">{{ e.institution }} · {{ e.location }}</p>
+      {% if e.notes[L].size > 0 %}
+      <ul class="entry__notes">
+        {% for n in e.notes[L] %}<li>{{ n | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+
+    <p class="subhead">{{ t.cv.experience }}</p>
+    {% for e in site.data.cv.experience %}
+    <div class="entry">
+      <div class="entry__head">
+        <h3 class="entry__title">{{ e.role[L] }}</h3>
+        <span class="entry__period">{{ e.period[L] | default: e.period }}</span>
+      </div>
+      <p class="entry__sub">{{ e.institution[L] | default: e.institution }} · {{ e.location[L] | default: e.location }}</p>
+      {% if e.notes[L].size > 0 %}
+      <ul class="entry__notes">
+        {% for n in e.notes[L] %}<li>{{ n | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+
+    <p class="subhead">{{ t.cv.funding }}</p>
+    {% for f in site.data.cv.funding %}
+    <div class="entry">
+      <div class="entry__head">
+        <h3 class="entry__title">{{ f.name[L] | default: f.name }}</h3>
+        <span class="entry__period">{{ f.period }}</span>
+      </div>
+      <p class="entry__sub">{{ f.agency[L] | default: f.agency }} · {{ f.role[L] | default: f.role }}</p>
+    </div>
+    {% endfor %}
+
+    <p class="subhead">{{ t.cv.awards }}</p>
+    {% for a in site.data.cv.awards %}
+    <div class="entry">
+      <div class="entry__head">
+        <h3 class="entry__title">{{ a.name[L] | default: a.name }}</h3>
+        <span class="entry__period">{{ a.year }}</span>
+      </div>
+      <p class="entry__sub">{{ a.org }}</p>
+    </div>
+    {% endfor %}
+
+    <p class="subhead">{{ t.cv.skills }}</p>
+    <ul class="orgs">
+      {% for s in site.data.cv.skills %}
+      <li><strong>{{ s.group[L] }}</strong><span>{{ s.items[L] | default: s.items }}</span></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</section>

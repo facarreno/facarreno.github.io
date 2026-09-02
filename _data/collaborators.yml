@@ -1,0 +1,39 @@
+# Grupos e instituciones con las que colaboro, y fuentes de financiamiento.
+groups:
+  - name: "Universidad de los Andes"
+    detail:
+      es: "Facultad de Ingeniería y Ciencias Aplicadas — Santiago, Chile"
+      en: "Faculty of Engineering and Applied Sciences — Santiago, Chile"
+    url: "https://www.uandes.cl/"
+
+  - name: "University of California, Davis"
+    detail:
+      es: "Tahoe Environmental Research Center · grupo de la Dra. Verónica L. Morales"
+      en: "Tahoe Environmental Research Center · Dr. Verónica L. Morales' group"
+    url: "https://tahoe.ucdavis.edu/"
+
+  - name: "Universidad de Valladolid"
+    detail:
+      es: "Instituto de Procesos Sostenibles — Valladolid, España"
+      en: "Institute of Sustainable Processes — Valladolid, Spain"
+    url: "https://ipssostenibles.uva.es/"
+
+  - name: "Universidad de Santiago de Chile"
+    detail:
+      es: "Departamento de Ingeniería Química"
+      en: "Department of Chemical Engineering"
+    url: "https://www.usach.cl/"
+
+funders:
+  - name: "ANID"
+    detail:
+      es: "Agencia Nacional de Investigación y Desarrollo — Fondecyt de Postdoctorado 3250412"
+      en: "National Research and Development Agency — Fondecyt Postdoctoral Grant 3250412"
+  - name: "CORFO"
+    detail:
+      es: "Semilla Inicia 22INI2-239253"
+      en: "Semilla Inicia 22INI2-239253"
+  - name: "Universidad de los Andes"
+    detail:
+      es: "Fondo de Ayuda a la Investigación (FAI)"
+      en: "Research Support Fund (FAI)"

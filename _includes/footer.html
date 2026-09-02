@@ -1,0 +1,57 @@
+{% assign t = site.data[page.lang] %}
+{% if page.lang == 'en' %}
+  {% assign f_res = '/en/research/' %}{% assign f_pub = '/en/publications/' %}
+  {% assign f_tea = '/en/teaching/' %}{% assign f_cv = '/en/cv/' %}{% assign f_con = '/en/contact/' %}
+{% else %}
+  {% assign f_res = '/investigacion/' %}{% assign f_pub = '/publicaciones/' %}
+  {% assign f_tea = '/docencia/' %}{% assign f_cv = '/cv/' %}{% assign f_con = '/contacto/' %}
+{% endif %}
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">Felipe A. Carreño López</p>
+        <p>{% if page.lang == 'en' %}{{ site.author.role_en }}<br>{{ site.author.institution_en }}{% else %}{{ site.author.role_es }}<br>{{ site.author.institution_es }}{% endif %}<br>{{ site.author.location }}</p>
+      </div>
+
+      <div>
+        <h4>{{ t.ui.explore }}</h4>
+        <ul>
+          <li><a href="{{ f_res | relative_url }}">{{ t.nav.research }}</a></li>
+          <li><a href="{{ f_pub | relative_url }}">{{ t.nav.publications }}</a></li>
+          <li><a href="{{ f_tea | relative_url }}">{{ t.nav.teaching }}</a></li>
+          <li><a href="{{ f_cv | relative_url }}">{{ t.nav.cv }}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>{{ t.nav.contact }}</h4>
+        <ul>
+          <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          <li><a href="https://orcid.org/{{ site.author.orcid }}" rel="me noopener">ORCID {{ site.author.orcid }}</a></li>
+          {% if site.author.linkedin != "" %}<li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me noopener">LinkedIn</a></li>{% endif %}
+          {% if site.author.github != "" %}<li><a href="https://github.com/{{ site.author.github }}" rel="me noopener">GitHub</a></li>{% endif %}
+          {% if site.author.scholar != "" %}<li><a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" rel="me noopener">Google Scholar</a></li>{% endif %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© {{ 'now' | date: "%Y" }} Felipe A. Carreño López</span>
+      <span><a href="{{ page.alt | default: '/' | relative_url }}">{{ t.ui.lang_switch }}</a> · {{ t.ui.updated }}: {{ site.time | date: "%m/%Y" }}</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.nav__toggle');
+    var links = document.getElementById('nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', function () {
+      var open = links.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>

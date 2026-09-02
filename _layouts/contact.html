@@ -1,0 +1,59 @@
+---
+layout: default
+---
+{% assign t = site.data[page.lang] %}
+{% assign L = page.lang %}
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>{{ t.contact.title }}</h1>
+    <p>{{ t.contact.lead }}</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <ul class="contact-list">
+          <li>
+            <dt>{{ t.contact.email_label }}</dt>
+            <dd><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></dd>
+          </li>
+          <li>
+            <dt>{{ t.contact.office_label }}</dt>
+            <dd>{{ t.contact.office }}</dd>
+          </li>
+          <li>
+            <dt>ORCID</dt>
+            <dd><a href="https://orcid.org/{{ site.author.orcid }}" rel="noopener">{{ site.author.orcid }}</a></dd>
+          </li>
+          {% if site.author.linkedin != "" %}
+          <li>
+            <dt>LinkedIn</dt>
+            <dd><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="noopener">/in/{{ site.author.linkedin }}</a></dd>
+          </li>
+          {% endif %}
+          {% if site.author.github != "" %}
+          <li>
+            <dt>GitHub</dt>
+            <dd><a href="https://github.com/{{ site.author.github }}" rel="noopener">@{{ site.author.github }}</a></dd>
+          </li>
+          {% endif %}
+          {% if site.author.scholar != "" %}
+          <li>
+            <dt>Google Scholar</dt>
+            <dd><a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" rel="noopener">{% if L == 'en' %}Profile{% else %}Perfil{% endif %}</a></dd>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div>
+        <h2>{{ t.teaching.join_title }}</h2>
+        <p class="text-muted">{{ t.teaching.join_body }}</p>
+        <a class="btn btn--primary" href="mailto:{{ site.author.email }}?subject={% if L == 'en' %}Thesis%20enquiry{% else %}Consulta%20de%20tesis{% endif %}">{{ t.teaching.join_cta }}</a>
+      </div>
+    </div>
+  </div>
+</section>

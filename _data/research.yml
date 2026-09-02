@@ -1,0 +1,150 @@
+# Líneas de investigación. Cada entrada tiene versión ES y EN.
+# icon: nombre del ícono SVG definido en _includes/icons.html
+- id: denitrification
+  icon: reactor
+  title:
+    es: "Desnitrificación autótrofa con azufre elemental"
+    en: "Sulfur-based autotrophic denitrification"
+  summary:
+    es: "Cómo la biopelícula y el azufre elemental se reorganizan dentro de un reactor de lecho fijo, y qué le hace eso a la remoción de nitrato en aguas subterráneas."
+    en: "How biofilm and elemental sulfur reorganise inside a fixed-bed reactor, and what that does to nitrate removal from groundwater."
+  body:
+    es: >-
+      El nitrato en aguas subterráneas es un problema de salud pública creciente,
+      y la desnitrificación autótrofa con azufre elemental (S⁰) es una de las
+      alternativas más económicas para tratarlo. El problema es que el lecho no
+      es estático: el azufre se consume, la biopelícula crece y el espacio
+      poroso cambia. Ese acoplamiento entre biología y flujo es lo que estudio.
+
+
+      El proyecto combina simulaciones CFD tridimensionales del reactor con
+      técnicas avanzadas de imagen digital que permiten seguir, sin destruir la
+      muestra, cómo evoluciona la estructura interna del lecho. El objetivo es
+      un modelo predictivo que sirva para operar y escalar estos reactores en vez
+      de ajustarlos por prueba y error.
+    en: >-
+      Nitrate in groundwater is a growing public health concern, and elemental
+      sulfur (S⁰) based autotrophic denitrification is one of the most
+      cost-effective alternatives to treat it. The catch is that the bed is not
+      static: sulfur is consumed, biofilm grows and the pore space changes. That
+      coupling between biology and flow is what I study.
+
+
+      The project combines three-dimensional CFD simulations of the reactor with
+      advanced digital imaging techniques that track, non-destructively, how the
+      internal structure of the bed evolves. The goal is a predictive model that
+      can be used to operate and scale these reactors, instead of tuning them by
+      trial and error.
+  keywords:
+    es: ["Fondecyt 3250412", "Biopelículas", "Lecho fijo", "Aguas subterráneas", "Imagen digital"]
+    en: ["Fondecyt 3250412", "Biofilms", "Fixed bed", "Groundwater", "Digital imaging"]
+
+- id: hydrodynamics
+  icon: flow
+  title:
+    es: "Hidrodinámica de biofiltros y biorreactores"
+    en: "Hydrodynamics of biofilters and bioreactors"
+  summary:
+    es: "Validar lo que la simulación dice del flujo real dentro de un lecho empacado, usando distribuciones de tiempo de residencia."
+    en: "Validating what simulation says about the real flow inside a packed bed, using residence time distributions."
+  body:
+    es: >-
+      Un modelo CFD de un lecho empacado es tan bueno como su validación. Parte
+      central de mi trabajo ha sido desarrollar métodos que confrontan la
+      simulación con mediciones experimentales de distribución de tiempos de
+      residencia (RTD), un observable que integra todo lo que ocurre dentro del
+      reactor: canalizaciones, zonas muertas, mezcla.
+
+
+      He aplicado este enfoque a biofiltros percoladores para el tratamiento de
+      gases contaminantes, combinando tomografía computarizada del material de
+      relleno con simulación CFD, y he desarrollado modelos seccionales híbridos
+      que capturan el efecto del empaque sobre la hidrodinámica a un costo
+      computacional razonable.
+    en: >-
+      A CFD model of a packed bed is only as good as its validation. A central
+      part of my work has been developing methods that confront simulation with
+      experimental residence time distribution (RTD) measurements — an
+      observable that integrates everything happening inside the reactor:
+      channelling, dead zones, mixing.
+
+
+      I have applied this approach to biotrickling filters for waste gas
+      treatment, combining computed tomography of the packing material with CFD
+      simulation, and developed hybrid section-based models that capture the
+      effect of the packing on hydrodynamics at a reasonable computational cost.
+  keywords:
+    es: ["RTD", "CFD–CT", "Biofiltros percoladores", "Modelos seccionales", "OpenFOAM"]
+    en: ["RTD", "CFD–CT", "Biotrickling filters", "Section-based models", "OpenFOAM"]
+
+- id: porous
+  icon: porous
+  title:
+    es: "Medios porosos vivos y bioclogging"
+    en: "Living porous media and bioclogging"
+  summary:
+    es: "Qué pasa con el flujo, la mezcla y la reacción cuando la biomasa va tapando progresivamente un medio poroso."
+    en: "What happens to flow, mixing and reaction when biomass progressively clogs a porous medium."
+  body:
+    es: >-
+      En colaboración con el grupo de la Dra. Verónica L. Morales en la
+      Universidad de California, Davis, estudio el *bioclogging*: la acumulación
+      progresiva de biomasa en un medio poroso y el reencauzamiento del flujo
+      que provoca. Es un fenómeno central en acuíferos, biorremediación y
+      recuperación de suelos, y sigue siendo difícil de predecir.
+
+
+      El trabajo combina experimentos en micromodelos con simulación a escala de
+      poro, y busca entender cómo la permeabilidad de la biopelícula y el patrón
+      de acumulación controlan el transporte reactivo. De aquí salieron dos
+      manuscritos en preparación y presentaciones en AGU e InterPore.
+    en: >-
+      In collaboration with Dr. Verónica L. Morales' group at the University of
+      California, Davis, I study *bioclogging*: the progressive accumulation of
+      biomass in a porous medium and the flow rerouting it causes. It is a
+      central phenomenon in aquifers, bioremediation and soil recovery, and it
+      remains hard to predict.
+
+
+      The work combines micromodel experiments with pore-scale simulation, and
+      aims to understand how biofilm permeability and the accumulation pattern
+      control reactive transport. Two manuscripts in preparation and
+      presentations at AGU and InterPore came out of this line.
+  keywords:
+    es: ["Escala de poro", "UC Davis", "Transporte reactivo", "Permeabilidad", "Acuíferos"]
+    en: ["Pore scale", "UC Davis", "Reactive transport", "Permeability", "Aquifers"]
+
+- id: twins
+  icon: twin
+  title:
+    es: "Hacia gemelos digitales de reactores"
+    en: "Towards digital twins of reactors"
+  summary:
+    es: "La proyección: convertir simulaciones costosas en modelos rápidos que sirvan para operar y diseñar en tiempo real."
+    en: "Where this is going: turning expensive simulations into fast models that can drive operation and design in real time."
+  future: true
+  body:
+    es: >-
+      Las tres líneas anteriores convergen en un mismo objetivo de mediano
+      plazo: construir gemelos digitales de reactores, es decir, representaciones
+      computacionales suficientemente rápidas y fieles como para acompañar la
+      operación y el diseño en tiempo real, alimentadas por simulaciones CFD de
+      alta fidelidad y por datos de imagen.
+
+
+      Más adelante, quiero extender estas herramientas al estudio de sistemas
+      acuáticos naturales —lagos y ríos— donde los mismos acoplamientos entre
+      flujo, biología y transporte determinan la calidad del agua.
+    en: >-
+      The three lines above converge on a single medium-term goal: building
+      digital twins of reactors — computational representations fast and
+      faithful enough to accompany operation and design in real time, fed by
+      high-fidelity CFD simulations and imaging data.
+
+
+      Further ahead, I want to extend these tools to natural aquatic systems —
+      lakes and rivers — where the same couplings between flow, biology and
+      transport govern water quality.
+  keywords:
+    es: ["Modelos reducidos", "Diseño de reactores", "Sistemas acuáticos"]
+    en: ["Reduced-order models", "Reactor design", "Aquatic systems"]

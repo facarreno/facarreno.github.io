@@ -1,0 +1,187 @@
+---
+layout: default
+---
+{% assign t = site.data[page.lang] %}
+{% assign L = page.lang %}
+{% if L == 'en' %}
+  {% assign u_res = '/en/research/' %}{% assign u_pub = '/en/publications/' %}
+  {% assign u_tea = '/en/teaching/' %}{% assign u_cv = '/en/cv/' %}{% assign u_con = '/en/contact/' %}
+  {% assign cvfile = '/assets/cv/Felipe_Carreno_CV_EN.pdf' %}
+{% else %}
+  {% assign u_res = '/investigacion/' %}{% assign u_pub = '/publicaciones/' %}
+  {% assign u_tea = '/docencia/' %}{% assign u_cv = '/cv/' %}{% assign u_con = '/contacto/' %}
+  {% assign cvfile = '/assets/cv/Felipe_Carreno_CV_ES.pdf' %}
+{% endif %}
+
+<!-- ============================================================== HERO === -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__inner">
+      <div>
+        <p class="eyebrow">{{ t.home.hero_kicker }}</p>
+        <h1>{{ t.home.hero_title }}</h1>
+        <p class="hero__lead">{{ t.home.hero_lead }}</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="{{ u_res | relative_url }}">{{ t.home.hero_cta_research }}</a>
+          <a class="btn btn--ghost" href="{{ cvfile | relative_url }}">{{ t.home.hero_cta_cv }}</a>
+        </div>
+      </div>
+      <div class="hero__portrait-wrap">
+        <img class="hero__portrait" src="{{ '/assets/img/perfil.jpg' | relative_url }}"
+             alt="Felipe A. Carreño López" width="440" height="440">
+        <p class="hero__caption">
+          {% if L == 'en' %}{{ site.author.role_en }}<br>{{ site.author.degree_en }}{% else %}{{ site.author.role_es }}<br>{{ site.author.degree_es }}{% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== MÉTRICAS === -->
+<section class="section" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric__value">{{ site.metrics.wos_docs }}</div>
+        <div class="metric__label">{{ t.home.metric_wos }}</div>
+      </div>
+      <div class="metric">
+        <div class="metric__value">{{ site.metrics.citations }}</div>
+        <div class="metric__label">{{ t.home.metric_citations }}</div>
+      </div>
+      <div class="metric">
+        <div class="metric__value">{{ site.data.cv.funding | size }}</div>
+        <div class="metric__label">{{ t.home.metric_funding }}</div>
+      </div>
+      <div class="metric">
+        <div class="metric__value">{{ site.data.theses | size }}</div>
+        <div class="metric__label">{{ t.home.metric_theses }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= SOBRE MÍ === -->
+<section class="section">
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <p class="eyebrow">{{ t.home.about_title }}</p>
+        <dl class="about__side">
+          <dt>{{ t.cv.role }}</dt>
+          <dd>{% if L == 'en' %}{{ site.author.role_en }}{% else %}{{ site.author.role_es }}{% endif %}</dd>
+          <dt>{% if L == 'en' %}Affiliation{% else %}Afiliación{% endif %}</dt>
+          <dd>{% if L == 'en' %}{{ site.author.institution_en }}{% else %}{{ site.author.institution_es }}{% endif %}</dd>
+          <dt>ORCID</dt>
+          <dd><a href="https://orcid.org/{{ site.author.orcid }}" rel="noopener">{{ site.author.orcid }}</a></dd>
+          <dt>{{ t.contact.email_label }}</dt>
+          <dd><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></dd>
+        </dl>
+      </div>
+      <div class="about__body">
+        {{ t.home.about_body | markdownify }}
+        <a class="btn btn--outline" href="{{ u_cv | relative_url }}">{{ t.nav.cv }} →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= INVESTIGACIÓN === -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">{{ t.nav.research }}</p>
+      <h2>{{ t.home.research_title }}</h2>
+      <p>{{ t.home.research_lead }}</p>
+    </div>
+    <div class="cards">
+      {% for line in site.data.research %}
+      <article class="card{% if line.future %} card--future{% endif %}">
+        <div class="card__icon">{% include icons.html name=line.icon %}</div>
+        <h3>{{ line.title[L] }}</h3>
+        <p>{{ line.summary[L] }}</p>
+        <a class="card__link" href="{{ u_res | relative_url }}#{{ line.id }}">{{ t.home.research_more }}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================== PUBLICACIONES === -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">{{ t.nav.publications }}</p>
+      <h2>{{ t.home.pubs_title }}</h2>
+    </div>
+    <ul class="pub-list">
+      {% for p in site.data.publications.indexed %}{% if p.featured %}
+        {% include pub-item.html pub=p %}
+      {% endif %}{% endfor %}
+    </ul>
+    <p style="margin-top:2rem"><a class="btn btn--outline" href="{{ u_pub | relative_url }}">{{ t.home.pubs_all }}</a></p>
+  </div>
+</section>
+
+<!-- ============================================================ NOVEDADES === -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">{{ t.home.news_kicker }}</p>
+      <h2>{{ t.home.news_title }}</h2>
+    </div>
+    <ul class="news">
+      {% for n in site.data.news limit: 5 %}
+      <li>
+        <div class="news__date">
+          <span class="news__tag">{{ n.tag[L] }}</span>
+          {% if L == 'en' %}{{ n.date | date: "%b %Y" }}{% else %}{{ n.date | date: "%m/%Y" }}{% endif %}
+        </div>
+        <div>
+          <h3>{{ n.title[L] | markdownify | remove: '<p>' | remove: '</p>' }}</h3>
+          <p>{{ n.body[L] | markdownify | remove: '<p>' | remove: '</p>' }}
+          {% if n.link %} <a href="{{ n.link }}" rel="noopener">DOI</a>{% endif %}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ======================================================= COLABORACIONES === -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">{{ t.home.collab_kicker }}</p>
+      <h2>{{ t.home.collab_title }}</h2>
+    </div>
+    <ul class="orgs">
+      {% for c in site.data.collaborators.groups %}
+      <li>
+        <strong>{% if c.url %}<a href="{{ c.url }}" rel="noopener">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</strong>
+        <span>{{ c.detail[L] }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p class="subhead" style="margin-top:3rem">{{ t.home.funding_title }}</p>
+    <ul class="orgs">
+      {% for f in site.data.collaborators.funders %}
+      <li><strong>{{ f.name }}</strong><span>{{ f.detail[L] }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ================================================================== CTA === -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>{{ t.teaching.join_title }}</h2>
+        <p>{{ t.teaching.join_body }}</p>
+      </div>
+      <a class="btn btn--primary" href="{{ u_con | relative_url }}">{{ t.teaching.join_cta }}</a>
+    </div>
+  </div>
+</section>

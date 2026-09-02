@@ -1,0 +1,138 @@
+# Interface strings — English
+nav:
+  home: "Home"
+  research: "Research"
+  publications: "Publications"
+  teaching: "Teaching"
+  cv: "CV"
+  contact: "Contact"
+
+home:
+  hero_kicker: "Universidad de los Andes · Santiago, Chile"
+  hero_title: "Computational simulation to understand and design environmental processes"
+  hero_lead: >-
+    I use computational fluid dynamics (CFD) and digital imaging to open the
+    black box of bioreactors: how gas and liquid flow, how biofilm grows, and
+    how that determines the performance of a treatment process.
+  hero_cta_research: "Explore research lines"
+  hero_cta_cv: "Download CV"
+
+  about_title: "About"
+  about_body: >-
+    I hold a PhD in Engineering Sciences (*Summa cum laude*) and a degree in
+    Chemical Engineering, and I am currently a postdoctoral researcher at
+    Universidad de los Andes. I lead, as Principal Investigator, the
+    **Fondecyt Postdoctoral Grant No. 3250412** (2025–2028), devoted to
+    characterising biofilm and elemental sulfur dynamics in fixed-bed reactors
+    for the autotrophic denitrification of groundwater.
+
+
+    Over my career I have applied these tools to very different problems — gas
+    biofiltration, soil bioremediation, multiphase simulation of cementitious
+    materials — and that multidisciplinary drive has shaped my work and my
+    international collaborations with the University of California, Davis and
+    the University of Valladolid.
+
+
+    My goal is to consolidate an independent line aimed at building **digital
+    twins** of reactors from CFD simulations, and later to extend these tools
+    to natural aquatic systems.
+
+  metrics_title: "By the numbers"
+  metric_h: "h-index (WoS)"
+  metric_funding: "Grants awarded"
+  metric_citations: "Citations"
+  metric_wos: "Indexed articles"
+  metric_theses: "Theses supervised"
+
+  research_title: "Research lines"
+  research_lead: "Three questions that run through everything I do."
+  research_more: "Explore this line"
+
+  pubs_title: "Selected publications"
+  pubs_all: "See all publications"
+
+  news_kicker: "Latest"
+  news_title: "News"
+  news_all: "See all"
+
+  collab_kicker: "Network"
+  collab_title: "Collaborations & networks"
+  funding_title: "Funding"
+
+research:
+  title: "Research"
+  lead: >-
+    My work connects computational fluid mechanics with the biology of
+    reactors: simulating what happens inside the bed so that we can design it
+    better.
+  current_title: "Ongoing project"
+  methods_kicker: "Method"
+  methods_title: "How I work"
+  methods_lead: >-
+    Tools and approaches I use across all research lines.
+
+publications:
+  title: "Publications"
+  lead: "Web of Science indexed articles, manuscripts in preparation, patents and conference contributions."
+  indexed: "Peer-reviewed articles (WoS)"
+  inprep: "Manuscripts in preparation"
+  patents: "Patents"
+  conferences: "Conferences"
+  metrics_note: "h-index: {h} · {c} citations · {n} indexed documents (WoS)"
+
+teaching:
+  title: "Teaching"
+  lead: >-
+    I teach modelling and simulation in engineering, and supervise undergraduate
+    and master's theses at the intersection of CFD and environmental processes.
+  philosophy_title: "How I approach teaching"
+  courses_kicker: "Classroom"
+  courses_title: "Courses"
+  courses_lead_prof: "Lecturer in charge"
+  courses_lead_ta: "Teaching assistant"
+  theses_kicker: "Students"
+  theses_title: "Supervised theses"
+  theses_lead: "Students I have supervised or co-supervised."
+  theses_current: "Ongoing"
+  theses_past: "Completed"
+  join_title: "Want to do your thesis with me?"
+  join_body: >-
+    I am looking for students in Chemical, Environmental or related Engineering
+    with an interest in numerical simulation, water treatment or biological
+    processes. Previous CFD experience is not required — curiosity and a
+    willingness to code are. Write to me with a short note on what interests you.
+  join_cta: "Get in touch"
+
+cv:
+  title: "Curriculum Vitae"
+  lead: "Full PDF version and a summary of my trajectory."
+  download_es: "Descargar CV (español)"
+  download_en: "Download CV (English)"
+  education: "Education"
+  experience: "Experience"
+  funding: "Awarded funding"
+  awards: "Awards & distinctions"
+  skills: "Skills"
+  role: "Role"
+
+contact:
+  title: "Contact"
+  lead: >-
+    Get in touch if you are interested in collaborating, doing a thesis, or
+    discussing reactor simulation.
+  email_label: "Email"
+  office_label: "Office"
+  office: "Faculty of Engineering and Applied Sciences, Universidad de los Andes, Santiago, Chile"
+
+ui:
+  lang_switch: "Español"
+  lang_switch_code: "ES"
+  read_more: "Read more"
+  present: "Present"
+  supervisor: "Supervisor"
+  cosupervisor: "Co-supervisor"
+  explore: "Explore"
+  back_home: "Back to home"
+  updated: "Last updated"
+  skip: "Skip to content"

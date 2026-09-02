@@ -1,0 +1,165 @@
+education:
+  - degree:
+      es: "Doctor en Ciencias de la Ingeniería"
+      en: "PhD in Engineering Sciences"
+    institution: "Universidad de los Andes"
+    location: "Santiago, Chile"
+    period: "2018–2023"
+    notes:
+      es:
+        - "Distinción *Summa cum laude*"
+        - "Tutores: Dr. Patricio Moreno y Dr. Alberto Vergara"
+        - "Tesis: *A novel fluid dynamic study of the gas–liquid flows in biotrickling filters through CFD simulations and digital imaging techniques*"
+      en:
+        - "*Summa cum laude* distinction"
+        - "Advisors: Dr. Patricio Moreno and Dr. Alberto Vergara"
+        - "Thesis: *A novel fluid dynamic study of the gas–liquid flows in biotrickling filters through CFD simulations and digital imaging techniques*"
+
+  - degree:
+      es: "Ingeniero Civil en Química"
+      en: "BSc/MEng in Chemical Engineering"
+    institution: "Universidad de Santiago de Chile"
+    location: "Santiago, Chile"
+    period: "2010–2017"
+    notes:
+      es:
+        - "Tutor: Dr. Luis Díaz Robles"
+        - "Tesis: *Modelación y simulación fluidodinámica de un reactor batch en condiciones de agua subcrítica*"
+      en:
+        - "Advisor: Dr. Luis Díaz Robles"
+        - "Thesis: *Fluid-dynamic modelling and simulation of a batch reactor under subcritical water conditions*"
+
+  - degree:
+      es: "Diplomado en Docencia Universitaria"
+      en: "Graduate Diploma in University Teaching"
+    institution: "Universidad de los Andes"
+    location: "Santiago, Chile"
+    period: "2024–2025"
+    notes:
+      es: []
+      en: []
+
+experience:
+  - role:
+      es: "Investigador Postdoctoral"
+      en: "Postdoctoral Researcher"
+    institution:
+      es: "Facultad de Ingeniería y Ciencias Aplicadas, Universidad de los Andes"
+      en: "Faculty of Engineering and Applied Sciences, Universidad de los Andes"
+    location: "Santiago, Chile"
+    period:
+      es: "2024 – Presente"
+      en: "2024 – Present"
+    notes:
+      es:
+        - "Postdoctorado FAI (2024) y, posteriormente, Fondecyt de Postdoctorado N.º 3250412 (2025–2028) como Investigador Responsable"
+      en:
+        - "FAI Postdoctoral Fellowship (2024) and subsequently Fondecyt Postdoctoral Grant No. 3250412 (2025–2028) as Principal Investigator"
+
+  - role:
+      es: "Investigador Visitante"
+      en: "Visiting Researcher"
+    institution:
+      es: "Tahoe Environmental Research Center, University of California, Davis"
+      en: "Tahoe Environmental Research Center, University of California, Davis"
+    location: "Davis, EE. UU."
+    period:
+      es: "Sep. – Dic. 2023"
+      en: "Sep – Dec 2023"
+    notes:
+      es:
+        - "FOVI220094 — reología de materiales cementicios para infraestructura de hormigón más sustentable"
+        - "Colaboración con el grupo de la Dra. Verónica L. Morales en modelación CFD de *bioclogging*"
+      en:
+        - "FOVI220094 — rheology of cementitious materials for more sustainable concrete infrastructure"
+        - "Collaboration with Dr. Verónica L. Morales' group on CFD modelling of bioclogging"
+
+  - role:
+      es: "Director Tecnológico y cofundador"
+      en: "Chief Technology Officer and co-founder"
+    institution:
+      es: "ASOKA SpA"
+      en: "ASOKA SpA"
+    location: "Santiago, Chile"
+    period: "2022–2024"
+    notes:
+      es:
+        - "Empresa de base científico-tecnológica orientada a tecnologías disruptivas de desalación de agua"
+      en:
+        - "Science- and technology-based startup focused on disruptive water desalination technologies"
+
+  - role:
+      es: "Investigador Visitante"
+      en: "Visiting Researcher"
+    institution:
+      es: "Instituto de Procesos Sostenibles, Universidad de Valladolid"
+      en: "Institute of Sustainable Processes, University of Valladolid"
+    location:
+      es: "Valladolid, España"
+      en: "Valladolid, Spain"
+    period:
+      es: "Ene. – Ago. 2020"
+      en: "Jan – Aug 2020"
+    notes:
+      es:
+        - "REDES190137 (CONICYT) — apoyo a la formación de redes internacionales entre centros de investigación"
+      en:
+        - "REDES190137 (CONICYT) — support for international research networks"
+
+funding:
+  - name: "Fondecyt de Postdoctorado N.º 3250412"
+    agency: "ANID"
+    role:
+      es: "Investigador Responsable"
+      en: "Principal Investigator"
+    period: "2025–2028"
+
+  - name: "Semilla Inicia 22INI2-239253"
+    agency: "CORFO"
+    role:
+      es: "Cofundador, ASOKA SpA"
+      en: "Co-founder, ASOKA SpA"
+    period: "2023"
+
+  - name:
+      es: "Brain Chile 2023 — 2.º lugar"
+      en: "Brain Chile 2023 — 2nd place"
+    agency:
+      es: "Centro de Innovación Anacleto Angelini, Pontificia Universidad Católica de Chile"
+      en: "Anacleto Angelini Innovation Center, Pontificia Universidad Católica de Chile"
+    role:
+      es: "Cofundador, ASOKA SpA"
+      en: "Co-founder, ASOKA SpA"
+    period: "2023"
+
+awards:
+  - name:
+      es: "Beca de Doctorado Nacional"
+      en: "National Doctoral Scholarship"
+    org: "ANID"
+    year: "2021"
+  - name:
+      es: "Beca FAI de Doctorado"
+      en: "FAI Doctoral Scholarship"
+    org: "Universidad de los Andes"
+    year: "2018"
+
+skills:
+  - group:
+      es: "Simulación"
+      en: "Simulation"
+    items: "OpenFOAM · Ansys Fluent · LIGGGHTS · CFDEM · Salome · cfMesh · MeshLab"
+  - group:
+      es: "Programación"
+      en: "Programming"
+    items: "Python · C++ · MATLAB · GNU Bash"
+  - group:
+      es: "Herramientas"
+      en: "Tools"
+    items: "LaTeX · Linux · Git · Inkscape · Notion"
+  - group:
+      es: "Idiomas"
+      en: "Languages"
+    items:
+      es: "Español (nativo) · Inglés (avanzado)"
+      en: "Spanish (native) · English (advanced)"

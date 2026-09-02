@@ -1,0 +1,109 @@
+# Publicaciones. 'me' marca al autor para destacarlo en negrita.
+# featured: true -> aparece en la portada.
+indexed:
+  - year: 2026
+    authors: "Yánez, D., Manterola, J., Guerrero, L., Carreño-López, F. A., Huiliñir, C."
+    title: "Enhancing sulfur-based denitrification with natural zeolite: performance under autotrophic and mixotrophic operation"
+    journal: "Biodegradation"
+    details: "37(4), 128"
+    quartile: "Q2"
+    impact: "4.2"
+    doi: "10.1007/s10532-026-10352-4"
+    featured: true
+
+  - year: 2026
+    authors: "Carreño-López, F. A., Moreno-Casas, P. A., Scott, F., Vergara-Fernández, A., Sierra-Pallares, J., Muñoz, R."
+    title: "Hybrid section-based modeling of gas-phase hydrodynamics in biotrickling filters: influence of packing material on residence time distributions"
+    journal: "Biochemical Engineering Journal"
+    details: "227, 110049"
+    quartile: "Q2"
+    impact: "3.7"
+    doi: "10.1016/j.bej.2025.110049"
+    featured: true
+
+  - year: 2023
+    authors: "Carreño-López, F. A., Moreno-Casas, P. A., Scott, F., Iza, J., Sierra-Pallares, J., Muñoz, R., Vergara-Fernández, A."
+    title: "A convenient method to validate the gas flow of a CFD–CT simulation applied to a packed bed used in gas biofiltration through residence time distributions"
+    journal: "Chemical Engineering Journal"
+    details: "451(4), 138795"
+    quartile: "Q1"
+    impact: "15.1"
+    doi: "10.1016/j.cej.2022.138795"
+    featured: true
+
+  - year: 2020
+    authors: "Vergara-Fernández, A., Scott, F., Carreño-López, F. A., Aroca, G., Moreno-Casas, P. A., González-Sánchez, A., Muñoz, R."
+    title: "A comparative assessment of the performance of fungal–bacterial and fungal biofilters for methane abatement"
+    journal: "Journal of Environmental Chemical Engineering"
+    details: "8(5), 104421"
+    quartile: "Q1"
+    impact: "7.4"
+    doi: "10.1016/j.jece.2020.104421"
+    featured: false
+
+in_preparation:
+  - year: 2026
+    authors: "Vargas Lara, J. L., Khoshtarash, H., Carreño-López, F. A., Al-Zghoul, B. M., Fadely, E. C., Peña, J., Ahadiyan, H., Roche, K., Bombardelli, F. A., Morales, V. L."
+    title: "Flow, mixing, and reaction dynamics in progressively bioclogged porous media"
+    target: "Environmental Science & Technology"
+    quartile: "Q1"
+    impact: "11.4"
+
+  - year: 2026
+    authors: "Khoshtarash, H., Vargas Lara, J. L., Carreño-López, F. A., Al-Zghoul, B. M., Fadely, E. C., Peña, J., Morales, V. L."
+    title: "Sensitivity analysis of biofilm permeability and progressive biomass accumulation on flow and transport in a bioclogged porous medium"
+    target: "Environmental Science & Technology"
+    quartile: "Q1"
+    impact: "11.4"
+
+patents:
+  - authors: "Ugarte, C., Cruz, R. & Carreño, F. A."
+    title:
+      es: "Sistema y método de desalinización de agua de mar"
+      en: "Seawater desalination system and method"
+    details: "Patente N.º 202302685, INAPI, Santiago, Chile"
+
+conferences:
+  - year: 2026
+    name: "InterPore 2026"
+    contribution: "Living porous media: uncovering the microbe–fluid–rock interactions that reshape subsurface transport"
+    type:
+      es: "Póster"
+      en: "Poster"
+    venue: "Université de Nantes, Nantes, Francia"
+    date:
+      es: "19–22 mayo 2026"
+      en: "19–22 May 2026"
+
+  - year: 2025
+    name: "XXII Congreso Chileno de Ingeniería Química"
+    contribution: "Simulación CFD de un biofiltro de lecho empacado con azufre elemental aplicado a la desnitrificación autótrofa"
+    type:
+      es: "Póster y presentación oral"
+      en: "Poster and oral presentation"
+    venue: "Pontificia Universidad Católica de Valparaíso, Chile"
+    date:
+      es: "27–30 octubre 2025"
+      en: "27–30 October 2025"
+
+  - year: 2024
+    name: "AGU Annual Meeting 2024"
+    contribution: "Evolution of biofilm permeability and pore-scale hydrodynamics in a progressively bioclogged sandy medium"
+    type:
+      es: "Póster"
+      en: "Poster"
+    venue: "Walter E. Washington Convention Center, Washington D.C., EE. UU."
+    date:
+      es: "9–13 diciembre 2024"
+      en: "9–13 December 2024"
+
+  - year: 2024
+    name: "XXII Congreso Chileno de Mecánica Computacional"
+    contribution: "A novel validation of the gas flow in a CFD–CT simulation of packed bed biofilters through residence time distributions"
+    type:
+      es: "Presentación oral"
+      en: "Oral presentation"
+    venue: "Pontificia Universidad Católica de Valparaíso, Chile"
+    date:
+      es: "3–4 octubre 2024"
+      en: "3–4 October 2024"

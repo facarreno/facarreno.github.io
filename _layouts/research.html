@@ -1,0 +1,89 @@
+---
+layout: default
+---
+{% assign t = site.data[page.lang] %}
+{% assign L = page.lang %}
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>{{ t.research.title }}</h1>
+    <p>{{ t.research.lead }}</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    {% for line in site.data.research %}
+    <article class="research-block" id="{{ line.id }}">
+      <div class="research-block__aside">
+        <div class="card__icon">{% include icons.html name=line.icon %}</div>
+        <h2>{{ line.title[L] }}</h2>
+        <ul class="chips">
+          {% for k in line.keywords[L] %}<li>{{ k }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div class="research-block__body">
+        <p><strong>{{ line.summary[L] }}</strong></p>
+        {{ line.body[L] | markdownify }}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">{{ t.research.current_title }}</p>
+      <h2>Fondecyt de Postdoctorado N.º 3250412</h2>
+    </div>
+    <div class="about">
+      <div>
+        <dl class="about__side">
+          <dt>{{ t.cv.role }}</dt>
+          <dd>{% if L == 'en' %}Principal Investigator{% else %}Investigador Responsable{% endif %}</dd>
+          <dt>{% if L == 'en' %}Period{% else %}Periodo{% endif %}</dt>
+          <dd>2025–2028</dd>
+          <dt>{% if L == 'en' %}Agency{% else %}Agencia{% endif %}</dt>
+          <dd>ANID</dd>
+          <dt>{% if L == 'en' %}Sponsor{% else %}Patrocinante{% endif %}</dt>
+          <dd>Dr. César Huiliñir</dd>
+        </dl>
+      </div>
+      <div class="about__body">
+        <p><em>Assessing biofilm and elemental sulfur dynamics in a groundwater elemental sulfur-based
+        autotrophic denitrification fixed bed reactor through CFD simulations coupled with digital
+        imaging techniques.</em></p>
+        {% if L == 'en' %}
+        <p>The project characterises how biofilm and elemental sulfur evolve inside a fixed-bed
+        reactor treating nitrate-contaminated groundwater, coupling three-dimensional CFD simulations
+        with non-destructive digital imaging. Four undergraduate and graduate theses are currently
+        running within it.</p>
+        {% else %}
+        <p>El proyecto caracteriza cómo evolucionan la biopelícula y el azufre elemental dentro de un
+        reactor de lecho fijo que trata aguas subterráneas contaminadas con nitrato, acoplando
+        simulaciones CFD tridimensionales con técnicas de imagen digital no destructivas. Actualmente
+        se desarrollan cuatro tesis de pregrado y posgrado en su marco.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">{{ t.research.methods_kicker }}</p>
+      <h2>{{ t.research.methods_title }}</h2>
+      <p>{{ t.research.methods_lead }}</p>
+    </div>
+    <ul class="orgs">
+      {% for s in site.data.cv.skills %}
+      <li>
+        <strong>{{ s.group[L] }}</strong>
+        <span>{% if s.items.es %}{{ s.items[L] }}{% else %}{{ s.items }}{% endif %}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

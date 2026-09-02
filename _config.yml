@@ -1,0 +1,74 @@
+# ==============================================================================
+#  Sitio personal — Felipe A. Carreño López
+#  Jekyll + GitHub Pages
+#
+#  IMPORTANTE: reemplaza GITHUB_USER por tu usuario real de GitHub.
+#  Si el repositorio se llama <usuario>.github.io, deja baseurl vacío.
+# ==============================================================================
+
+title: "Felipe A. Carreño López"
+tagline_es: "CFD para procesos ambientales"
+tagline_en: "CFD for environmental processes"
+description: >-
+  Investigador postdoctoral en la Universidad de los Andes. Simulación de
+  dinámica de fluidos computacional (CFD) aplicada a biopelículas, biorreactores
+  y procesos ambientales.
+
+url: "https://facarreno.github.io"
+baseurl: ""
+
+author:
+  name: "Felipe A. Carreño López"
+  short_name: "Felipe Carreño"
+  role_es: "Investigador Postdoctoral"
+  role_en: "Postdoctoral Researcher"
+  degree_es: "Doctor en Ciencias de la Ingeniería · Ingeniero Civil Químico"
+  degree_en: "PhD in Engineering Sciences · Chemical Engineer"
+  institution_es: "Facultad de Ingeniería y Ciencias Aplicadas, Universidad de los Andes"
+  institution_en: "Faculty of Engineering and Applied Sciences, Universidad de los Andes"
+  location: "Santiago, Chile"
+  email: "facarreno@miuandes.cl"
+  orcid: "0000-0002-5255-2363"
+  linkedin: "faclopez91"
+  github: "facarreno"
+  scholar: ""          # ID de Google Scholar, si lo tienes
+  researchgate: ""     # perfil de ResearchGate, si lo tienes
+
+# Métricas mostradas en la portada (actualizar cuando cambien)
+metrics:
+  h_index: 2
+  citations: 30
+  wos_docs: 4
+
+# ------------------------------------------------------------------ Jekyll ---
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: America/Santiago
+
+plugins:
+  - jekyll-sitemap
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .jekyll-cache
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: es
+  - scope:
+      path: "en"
+    values:
+      lang: en
