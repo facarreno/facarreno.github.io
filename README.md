@@ -4,9 +4,23 @@ Sitio web personal construido con **Jekyll** y publicado con **GitHub Pages**.
 Bilingüe español / inglés, sin base de datos y sin dependencias externas: todo
 el contenido vive en archivos YAML dentro de `_data/`.
 
+**En línea:** <https://facarreno.github.io> · repo `facarreno/facarreno.github.io`
+
+**¿Qué sección necesitas?**
+
+| Quiero… | Sección |
+|---|---|
+| agregar un paper, un tesista, una novedad | **4** — pídeselo a Claude, o **3** si lo haces a mano |
+| ver los cambios antes de publicarlos | **5** — compilar en local |
+| entender dónde está cada cosa | **2** — estructura |
+| poner un dominio propio | **6** |
+
+La sección 1 ya está hecha; queda como referencia para volver a montar el sitio
+desde cero.
+
 ---
 
-## 1. Publicarlo por primera vez
+## 1. Publicarlo por primera vez  ✅ *(ya hecho — 2 sep 2026)*
 
 1. Crea en GitHub un repositorio **público** llamado exactamente
    `TU_USUARIO.github.io` (por ejemplo `facarreno.github.io`). El nombre debe
@@ -120,7 +134,84 @@ agrega la otra.
 
 ---
 
-## 4. Compilar y previsualizar en local
+## 4. Actualizar el sitio pidiéndoselo a Claude
+
+El flujo del día a día no es editar YAML a mano: es decirle a Claude qué cambió.
+Hay un skill guardado (`actualizar-pagina-web`) que le da todo el contexto de
+este repositorio, así que basta con hablarle en castellano normal.
+
+### El ciclo
+
+1. **Le dices qué cambió**, en una frase. Ejemplos que funcionan tal cual:
+
+   - «Salió publicado el paper de Yánez en *Biodegradation*, agrégalo»
+   - «Cristóbal Núñez terminó su tesis, pásalo a finalizadas»
+   - «Agrega una novedad: presenté en el congreso de Valparaíso»
+   - «Voy a dictar Transferencia de Calor el próximo semestre»
+   - «Actualiza las citas a 45»
+
+2. **Claude edita el `_data/*.yml` que corresponda**, en español e inglés,
+   valida que el YAML no esté roto y deja el commit hecho.
+
+3. **Tú publicas** — el único paso manual:
+
+   ```bash
+   cd ~/Library/CloudStorage/Dropbox/pagina_web && git push
+   ```
+
+4. **Claude verifica** la página en producción un par de minutos después y te
+   confirma que quedó bien.
+
+Puedes juntar varios cambios y hacer un solo `git push` al final.
+
+### Por qué el push lo haces tú
+
+Claude trabaja desde una VM Linux aislada que ve las carpetas de Dropbox pero
+no tu llavero de macOS, donde están las credenciales de GitHub. Puede leer del
+repositorio remoto y hacer commits locales, pero no puede empujar. Es una
+frontera sana: un token con permiso de escritura no debería vivir en una
+sesión.
+
+Por la misma razón **Claude no puede compilar Jekyll**: el proxy de esa VM
+bloquea rubygems.org. Valida el YAML y revisa el Liquid a ojo, pero la
+compilación de verdad ocurre en tu Mac (`bundle exec jekyll serve`, sección 5) o
+en GitHub al hacer push.
+
+### Las tres reglas del contenido
+
+Valen igual si editas tú a mano:
+
+1. **Todo el contenido vive en `_data/*.yml`.** Los `.html` de página son tres
+   líneas de front matter y los `_layouts/` son estructura. Si un cambio de
+   contenido parece exigir tocar un layout, es que falta un campo en el YAML.
+2. **Todo texto visible existe en `es` y en `en`.** Si agregas uno y olvidas el
+   otro, esa frase se renderiza vacía y nadie lo nota hasta que está publicado.
+3. **No se publican** montos de fondos, tu teléfono ni tu dirección particular.
+   El contacto público es `facarreno@miuandes.cl`.
+
+Y una convención: tu nombre en las publicaciones se escribe siempre
+`Carreño-López, F. A.`. El sitio lo detecta y lo pone en negrita solo.
+
+### Si el sitio se cae después de un push
+
+Casi siempre es YAML mal formado, y tumba el build **completo**, no solo la
+página afectada. Para encontrarlo:
+
+```bash
+cd ~/Library/CloudStorage/Dropbox/pagina_web
+for f in _data/*.yml _config.yml; do
+  python3 -c "import yaml,sys;yaml.safe_load(open('$f'))" || echo "ERROR en $f"
+done
+```
+
+Sospechosos habituales: dos puntos sin comillas dentro de un texto
+(`title: Algo: otra cosa` ← rompe), indentación con tabulaciones, o una clave
+llamada `with` (es palabra reservada de Liquid; en `theses.yml` se llama
+`advisor` justamente por eso).
+
+El error exacto del build sale en la pestaña **Actions** del repositorio.
+
+## 5. Compilar y previsualizar en local
 
 GitHub Pages compila el sitio por ti al hacer `push`, así que esto es opcional.
 Sirve para ver los cambios antes de publicarlos y para detectar errores sin
@@ -196,7 +287,7 @@ una diferencia al publicar. Puedes verificar las versiones vigentes en
 del repositorio. Si el build falla, ahí sale el error. Es más lento (1–2 min por
 intento) pero funciona.
 
-## 5. Dominio propio (más adelante)
+## 6. Dominio propio (más adelante)
 
 1. Crea un archivo `CNAME` en la raíz con una sola línea: `tudominio.cl`
 2. En tu proveedor DNS apunta el dominio a GitHub Pages
