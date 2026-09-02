@@ -12,6 +12,30 @@
   period: "2026 –"
   status: current
 
+- student: "Sara Stevanovic"
+  program:
+    es: "Ingeniería Civil Química"
+    en: "Chemical Engineering"
+  role: supervisor
+  title:
+    es: "Desarrollo de un modelo de orden reducido basado en descomposición ortogonal propia, alimentado por simulaciones CFD de lechos empacados aleatorios, para el estudio de parámetros geométricos de diseño en un biofiltro de desnitrificación autótrofa con azufre elemental"
+    en: "Development of a proper orthogonal decomposition reduced-order model, driven by CFD simulations of random packed beds, to study geometric design parameters in an elemental sulfur autotrophic denitrification biofilter"
+  institution: "Universidad de los Andes"
+  period: "2026 –"
+  status: current
+
+- student: "Javiera Riderelli"
+  program:
+    es: "Ingeniería Civil Química"
+    en: "Chemical Engineering"
+  role: supervisor
+  title:
+    es: "Evaluación del destino de las descargas de nitrógeno en el Lago Llanquihue mediante el acoplamiento de transporte reactivo al modelo hidrodinámico tridimensional Si3D"
+    en: "Assessing the fate of nitrogen discharges in Lake Llanquihue by coupling reactive transport to the three-dimensional hydrodynamic model Si3D"
+  institution: "Universidad de los Andes"
+  period: "2026 –"
+  status: current
+
 - student: "Santiago Vila"
   program:
     es: "Ingeniería Civil Química"
@@ -23,7 +47,7 @@
     en: "Start-up and operational assessment of an elemental sulfur autotrophic denitrifying biofilter for nitrate removal from groundwater"
   institution: "Universidad de los Andes"
   period: "2025–2026"
-  status: current
+  status: past
 
 - student: "Samuel Abogabir Schacht"
   program:
@@ -36,7 +60,7 @@
     en: "Development and experimental validation of a three-dimensional CFD model of a fixed-bed reactor for sulfur-based autotrophic denitrification through residence time distribution analysis"
   institution: "Universidad de los Andes"
   period: "2025–2026"
-  status: current
+  status: past
 
 - student: "Andrés Orellana Molnar"
   program:
@@ -49,7 +73,7 @@
     en: "Modelling and simulation of an autotrophic denitrifying biofilm with S⁰ as electron donor"
   institution: "Universidad de los Andes"
   period: "2025–2026"
-  status: current
+  status: past
 
 - student: "Amparo Melgarejo Araya"
   program:
