@@ -151,23 +151,13 @@ layout: default
   </div>
 </section>
 
-<!-- ======================================================= COLABORACIONES === -->
+<!-- ======================================================= FINANCIAMIENTO === -->
 <section class="section">
   <div class="wrap">
     <div class="section__head">
-      <p class="eyebrow">{{ t.home.collab_kicker }}</p>
-      <h2>{{ t.home.collab_title }}</h2>
+      <p class="eyebrow">{{ t.home.funding_kicker }}</p>
+      <h2>{{ t.home.funding_title }}</h2>
     </div>
-    <ul class="orgs">
-      {% for c in site.data.collaborators.groups %}
-      <li>
-        <strong>{% if c.url %}<a href="{{ c.url }}" rel="noopener">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</strong>
-        <span>{{ c.detail[L] }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-
-    <p class="subhead" style="margin-top:3rem">{{ t.home.funding_title }}</p>
     <ul class="orgs">
       {% for f in site.data.collaborators.funders %}
       <li><strong>{{ f.name }}</strong><span>{{ f.detail[L] }}</span></li>

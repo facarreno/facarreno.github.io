@@ -57,8 +57,7 @@ home:
   news_title: "Novedades"
   news_all: "Ver todas"
 
-  collab_kicker: "Red"
-  collab_title: "Colaboraciones y redes"
+  funding_kicker: "Apoyo"
   funding_title: "Financiamiento"
 
 research:

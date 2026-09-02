@@ -1,4 +1,8 @@
-# Grupos e instituciones con las que colaboro, y fuentes de financiamiento.
+# Fuentes de financiamiento (se muestran en la portada) y, más abajo, instituciones.
+#
+# NOTA: el bloque "groups" YA NO SE MUESTRA en el sitio. Se retiró de la portada
+# a propósito: nombrar instituciones colaboradoras compromete a terceros. Se
+# conserva aquí por si alguna vez se quiere reactivar.
 groups:
   - name: "Universidad de los Andes"
     detail:
