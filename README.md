@@ -150,13 +150,14 @@ este repositorio, así que basta con hablarle en castellano normal.
    - «Voy a dictar Transferencia de Calor el próximo semestre»
    - «Actualiza las citas a 45»
 
-2. **Claude edita el `_data/*.yml` que corresponda**, en español e inglés,
-   valida que el YAML no esté roto y deja el commit hecho.
+2. **Claude edita el `_data/*.yml` que corresponda**, en español e inglés, y
+   valida que el YAML no esté roto. Te dice exactamente qué archivos tocó.
 
-3. **Tú publicas** — el único paso manual:
+3. **Tú publicas** — un solo comando:
 
    ```bash
-   cd ~/Library/CloudStorage/Dropbox/pagina_web && git push
+   cd ~/Library/CloudStorage/Dropbox/pagina_web && \
+     git add -A && git commit -m "actualizar sitio" && git push
    ```
 
 4. **Claude verifica** la página en producción un par de minutos después y te
@@ -164,13 +165,32 @@ este repositorio, así que basta con hablarle en castellano normal.
 
 Puedes juntar varios cambios y hacer un solo `git push` al final.
 
-### Por qué el push lo haces tú
+### Por qué git lo corres tú
 
-Claude trabaja desde una VM Linux aislada que ve las carpetas de Dropbox pero
-no tu llavero de macOS, donde están las credenciales de GitHub. Puede leer del
-repositorio remoto y hacer commits locales, pero no puede empujar. Es una
-frontera sana: un token con permiso de escritura no debería vivir en una
-sesión.
+Dos razones, y la segunda es la importante:
+
+1. **Credenciales.** Claude trabaja desde una VM Linux aislada que ve las
+   carpetas de Dropbox pero no tu llavero de macOS, donde están las credenciales
+   de GitHub. No puede empujar. Es una frontera sana: un token con permiso de
+   escritura no debería vivir en una sesión.
+
+2. **Esa VM no puede borrar archivos.** Y git necesita borrar: cada `commit`
+   crea `.git/index.lock` y `.git/HEAD.lock` y los elimina al terminar. Si no
+   puede, quedan ahí y **bloquean git para todo el mundo** — incluido tú, en tu
+   propia terminal, con el mensaje *«Another git process seems to be running»*.
+
+Por eso la regla es tajante: **Claude edita archivos, nunca corre `git add`,
+`git commit`, `git stash` ni `git reset` en este repositorio.** Si alguna vez
+quedan locks, se limpian así:
+
+```bash
+cd ~/Library/CloudStorage/Dropbox/pagina_web
+rm -f .git/index.lock .git/HEAD.lock .git/objects/maintenance.lock
+find .git/objects -name 'tmp_obj_*' -delete
+```
+
+(Antes de correrlo, asegúrate de que no tengas otra terminal con git abierto en
+esta carpeta — si la hay, el lock es legítimo.)
 
 Por la misma razón **Claude no puede compilar Jekyll**: el proxy de esa VM
 bloquea rubygems.org. Valida el YAML y revisa el Liquid a ojo, pero la
