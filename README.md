@@ -174,14 +174,17 @@ Dos razones, y la segunda es la importante:
    de GitHub. No puede empujar. Es una frontera sana: un token con permiso de
    escritura no debería vivir en una sesión.
 
-2. **Esa VM no puede borrar archivos.** Y git necesita borrar: cada `commit`
-   crea `.git/index.lock` y `.git/HEAD.lock` y los elimina al terminar. Si no
-   puede, quedan ahí y **bloquean git para todo el mundo** — incluido tú, en tu
-   propia terminal, con el mensaje *«Another git process seems to be running»*.
+2. **Esa VM no puede borrar archivos.** Y git necesita borrar: crea
+   `.git/index.lock` y `.git/HEAD.lock` y los elimina al terminar. Si no puede,
+   quedan ahí y **bloquean git para todo el mundo** — incluido tú, en tu propia
+   terminal, con el mensaje *«Another git process seems to be running»*.
 
-Por eso la regla es tajante: **Claude edita archivos, nunca corre `git add`,
-`git commit`, `git stash` ni `git reset` en este repositorio.** Si alguna vez
-quedan locks, se limpian así:
+   Y no es solo `commit`: **`git status` y `git diff` también escriben**, porque
+   refrescan el índice. La única forma segura de mirar el repo desde ahí es
+   `git --no-optional-locks status`.
+
+Por eso la regla es tajante: **Claude edita archivos y nada más; git lo corres
+tú.** Si alguna vez quedan locks, se limpian así:
 
 ```bash
 cd ~/Library/CloudStorage/Dropbox/pagina_web

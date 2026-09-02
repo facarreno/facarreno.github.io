@@ -48,6 +48,7 @@ layout: default
         <div class="pub__year">{{ c.year }}</div>
         <div>
           <h3 class="pub__title">{{ c.contribution }}</h3>
+          {% if c.authors %}<p class="pub__authors">{{ c.authors | replace: "Carreño-López, F. A.", "<b>Carreño-López, F. A.</b>" }}</p>{% endif %}
           <p class="pub__authors">{{ c.name }} · {{ c.venue }}</p>
           <p class="pub__meta">{{ c.date[L] }}<span class="pub__badge">{{ c.type[L] }}</span></p>
         </div>

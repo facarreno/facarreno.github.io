@@ -66,6 +66,7 @@ patents:
 conferences:
   - year: 2026
     name: "InterPore 2026"
+    authors: "Khoshtarash, H., Al-Zghoul, B. M., Carreño-López, F. A., Morales, V. L."
     contribution: "Living porous media: uncovering the microbe–fluid–rock interactions that reshape subsurface transport"
     type:
       es: "Póster"
@@ -77,6 +78,7 @@ conferences:
 
   - year: 2025
     name: "XXII Congreso Chileno de Ingeniería Química"
+    authors: "Carreño-López, F. A., Orellana, A., Abogabir, S., Vila, S., Hernández, S., Huiliñir, C."
     contribution: "Simulación CFD de un biofiltro de lecho empacado con azufre elemental aplicado a la desnitrificación autótrofa"
     type:
       es: "Póster y presentación oral"
@@ -88,6 +90,7 @@ conferences:
 
   - year: 2024
     name: "AGU Annual Meeting 2024"
+    authors: "Vargas Lara, J. L., Carreño-López, F. A., Fadely, E. C., Peña, J., Morales, V. L."
     contribution: "Evolution of biofilm permeability and pore-scale hydrodynamics in a progressively bioclogged sandy medium"
     type:
       es: "Póster"
@@ -99,6 +102,7 @@ conferences:
 
   - year: 2024
     name: "XXII Congreso Chileno de Mecánica Computacional"
+    authors: "Carreño-López, F. A., Moreno-Casas, P. A., Scott, F., Iza, J., Sierra-Pallares, J., Muñoz, R., Vergara-Fernández, A."
     contribution: "A novel validation of the gas flow in a CFD–CT simulation of packed bed biofilters through residence time distributions"
     type:
       es: "Presentación oral"

@@ -139,8 +139,11 @@ layout: default
         </div>
         <div>
           <h3>{{ n.title[L] | markdownify | remove: '<p>' | remove: '</p>' }}</h3>
-          <p>{{ n.body[L] | markdownify | remove: '<p>' | remove: '</p>' }}
-          {% if n.link %} <a href="{{ n.link }}" rel="noopener">DOI</a>{% endif %}</p>
+          {% if n.authors %}<p class="news__authors">{{ n.authors | replace: "Carreño-López, F. A.", "<b>Carreño-López, F. A.</b>" }}</p>{% endif %}
+          {% if n.body %}<p>{{ n.body[L] | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+          {% if n.citation or n.link %}
+          <p class="news__meta">{% if n.citation %}<span class="news__cite">{{ n.citation }}</span>{% endif %}{% if n.link %}{% if n.citation %} · {% endif %}<a href="{{ n.link }}" rel="noopener">DOI</a>{% endif %}</p>
+          {% endif %}
         </div>
       </li>
       {% endfor %}

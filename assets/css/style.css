@@ -260,7 +260,12 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 .news__date { font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .news__tag { display: block; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-weight: 650; margin-bottom: .15rem; }
 .news h3 { font-size: 1.02rem; margin-bottom: .25rem; }
-.news p { font-size: .93rem; color: var(--muted); margin: 0; }
+.news p { font-size: .93rem; color: var(--muted); margin: 0 0 .35rem; }
+.news p:last-child { margin-bottom: 0; }
+.news__authors { font-size: .88rem; color: var(--muted); }
+.news__authors b { color: var(--ink); font-weight: 650; }
+.news__meta { font-size: .85rem; }
+.news__cite { font-style: italic; color: var(--ink); }
 @media (max-width: 640px) { .news li { grid-template-columns: 1fr; gap: .3rem; } }
 
 /* --------------------------------------------------------------- logos --- */
