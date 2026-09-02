@@ -266,6 +266,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 .news__authors b { color: var(--ink); font-weight: 650; }
 .news__meta { font-size: .85rem; }
 .news__cite { font-style: italic; color: var(--ink); }
+.news__doi { font-size: .85rem; color: var(--primary); word-break: break-word; }
 @media (max-width: 640px) { .news li { grid-template-columns: 1fr; gap: .3rem; } }
 
 /* --------------------------------------------------------------- logos --- */
