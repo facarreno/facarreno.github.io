@@ -275,6 +275,22 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 .orgs strong { display: block; font-family: var(--serif); font-size: 1.02rem; }
 .orgs span { font-size: .88rem; color: var(--muted); }
 
+/* ------------------------------------------------------ banda de logos --- */
+/* fondo blanco a propósito: el PNG de G-Tech trae caja blanca opaca y el de
+   ANID es la versión clara invertida, ambos solo calzan sobre blanco */
+.logos-band { background: var(--bg); border-top: 1px solid var(--border); }
+.logos {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 4rem; list-style: none; margin: 0; padding: 2.8rem 0;
+}
+.logos img { height: 46px; width: auto; opacity: .85; }
+.logos img.is-tall { height: 78px; }
+@media (max-width: 640px) {
+  .logos { gap: 2rem; padding: 2rem 0; }
+  .logos img { height: 34px; }
+  .logos img.is-tall { height: 56px; }
+}
+
 /* ----------------------------------------------------------------- CTA --- */
 .cta {
   background: var(--primary); color: #e9f1f2;
