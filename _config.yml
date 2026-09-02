@@ -10,9 +10,9 @@ title: "Felipe A. Carreño López"
 tagline_es: "CFD para procesos ambientales"
 tagline_en: "CFD for environmental processes"
 description: >-
-  Investigador postdoctoral en la Universidad de los Andes. Simulación de
-  dinámica de fluidos computacional (CFD) aplicada a biopelículas, biorreactores
-  y procesos ambientales.
+  Investigador postdoctoral en la Universidad de los Andes. Uso dinámica de
+  fluidos computacional para entender y diseñar procesos biológicos y
+  ambientales, con trabajo en tratamiento de gases, aguas y suelos.
 
 url: "https://facarreno.github.io"
 baseurl: ""
@@ -31,7 +31,7 @@ author:
   orcid: "0000-0002-5255-2363"
   linkedin: "faclopez91"
   github: "facarreno"
-  scholar: ""          # ID de Google Scholar, si lo tienes
+  scholar: "OsNFId8AAAAJ"   # ID de Google Scholar
   researchgate: ""     # perfil de ResearchGate, si lo tienes
 
 # Métricas mostradas en la portada (actualizar cuando cambien)

@@ -128,7 +128,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 }
 .hero h1 { color: #fff; margin-bottom: 1rem; }
 .hero .eyebrow { color: var(--accent); }
-.hero__lead { font-size: 1.12rem; color: #cbdadd; max-width: 46ch; margin-bottom: 2rem; }
+.hero__lead { font-size: 1.08rem; color: #cbdadd; max-width: 54ch; margin-bottom: 2rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
 .hero__portrait {
   border-radius: var(--radius);

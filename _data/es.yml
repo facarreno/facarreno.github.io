@@ -9,12 +9,13 @@ nav:
 
 home:
   hero_kicker: "Universidad de los Andes · Santiago, Chile"
-  hero_title: "Simulación computacional para entender y diseñar procesos ambientales"
+  hero_title: "El límite no está en la biología, está en el flujo"
   hero_lead: >-
-    Uso dinámica de fluidos computacional (CFD) e imagen digital para abrir la
-    caja negra de los biorreactores: cómo fluye el gas y el líquido, cómo crece
-    la biopelícula y cómo eso determina el rendimiento de un proceso de
-    tratamiento.
+    Lo que me mueve es entender por qué un reactor rinde lo que rinde. Uso
+    dinámica de fluidos computacional para abrir esa caja negra —flujo,
+    biopelícula, transporte— y convertir lo que aprendo en modelos predictivos
+    que sirvan para optimizar y diseñar procesos reales. La misma pregunta la he
+    llevado al tratamiento de gases, de aguas y de suelos.
   hero_cta_research: "Ver líneas de investigación"
   hero_cta_cv: "Descargar CV"
 

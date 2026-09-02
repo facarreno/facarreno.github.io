@@ -9,11 +9,13 @@ nav:
 
 home:
   hero_kicker: "Universidad de los Andes · Santiago, Chile"
-  hero_title: "Computational simulation to understand and design environmental processes"
+  hero_title: "The bottleneck isn't biology, it's flow"
   hero_lead: >-
-    I use computational fluid dynamics (CFD) and digital imaging to open the
-    black box of bioreactors: how gas and liquid flow, how biofilm grows, and
-    how that determines the performance of a treatment process.
+    What drives me is understanding why a reactor performs the way it does. I
+    use computational fluid dynamics to open that black box —flow, biofilm,
+    transport— and turn what I learn into predictive models for optimising and
+    designing real processes. I have taken the same question to the treatment of
+    gases, water and soils.
   hero_cta_research: "Explore research lines"
   hero_cta_cv: "Download CV"
 
