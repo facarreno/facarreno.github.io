@@ -13,10 +13,10 @@
     deLaInicial: "de la inicial", laMedia: "\u00d7 la media", deLaRTD: "de la RTD",
     acumulando: "acumulando trazador\u2026",
     notaNormal: "Se construye en vivo con las part\u00edculas que van saliendo.",
-    notaColmatado: "Sin percolaci\u00f3n: no hay trazador que salga."
+    notaColmatado: "Sin percolaci\u00f3n: no hay trazador que salga.",
+    dec: ","
   }, i18nEl ? JSON.parse(i18nEl.textContent) : {});
-  let D = null;
-  const NX = D.nx, NY = D.ny, NC = NX * NY;
+  let D = null, NX = 0, NY = 0, NC = 0;
   const PE = [60, 150, 300, 800, 3000];
 
   // ---------------------------------------------------------- decodificar --
@@ -77,7 +77,6 @@
   const bed = document.getElementById("bed");
   const bctx = bed.getContext("2d");
   const fondo = document.createElement("canvas");
-  fondo.width = NX; fondo.height = NY;
   const fctx = fondo.getContext("2d");
 
   function pintarFondo(campo) {
@@ -273,7 +272,7 @@
     let s2 = 0; for (const t of salidas) { const d = t / med - 1; s2 += d * d; }
     s2 /= salidas.length;
     document.getElementById("d-n").innerHTML =
-      (s2 > 0 ? (1 / s2).toFixed(1).replace(".", ",") : "—") + "<small>" + T.deLaRTD + "</small>";
+      (s2 > 0 ? (1 / s2).toFixed(1).replace(".", T.dec) : "—") + "<small>" + T.deLaRTD + "</small>";
   }
 
   // -------------------------------------------------------------- estado ---
@@ -281,7 +280,7 @@
         sPe = document.getElementById("s-pe");
   const aviso = document.getElementById("aviso");
 
-  function fmt(x, n) { return x.toFixed(n).replace(".", ","); }
+  function fmt(x, n) { return x.toFixed(n).replace(".", T.dec); }
 
   async function aplicar() {
     const e = +sEmp.value, b = +sBio.value, ip = +sPe.value;
@@ -301,12 +300,12 @@
 
     document.getElementById("d-poro").textContent = fmt(caso.poro, 2);
     document.getElementById("d-perm").innerHTML =
-      (colmatado ? "0" : fmt(caso.Krel * 100, 0)) + "%<small>de la inicial</small>";
+      (colmatado ? "0" : fmt(caso.Krel * 100, 0)) + "%<small>" + T.deLaInicial + "</small>";
     document.getElementById("d-pico").innerHTML =
       fmt(caso.pico, 0) + "\u00d7<small>" + T.laMedia + "</small>";
     document.getElementById("c-perm").classList.toggle("alto", caso.Krel < 0.25);
     document.getElementById("c-pico").classList.toggle("alto", caso.pico > 20);
-    document.getElementById("d-n").innerHTML = "—<small>de la RTD</small>";
+    document.getElementById("d-n").innerHTML = "—<small>" + T.deLaRTD + "</small>";
     document.getElementById("rtd-nota").textContent =
       colmatado ? T.notaColmatado : T.notaNormal;
 
@@ -339,6 +338,8 @@
     : fetch(raiz + "casos.json").then(r => r.json());
   cargar.then(d => {
     D = d;
+    NX = D.nx; NY = D.ny; NC = NX * NY;
+    fondo.width = NX; fondo.height = NY;
     return aplicar();
   }).then(() => {
     requestAnimationFrame(bucle);

@@ -6,10 +6,12 @@ layout: default
 {% if L == 'en' %}
   {% assign u_res = '/en/research/' %}{% assign u_pub = '/en/publications/' %}
   {% assign u_tea = '/en/teaching/' %}{% assign u_cv = '/en/cv/' %}{% assign u_con = '/en/contact/' %}
+  {% assign u_sim = '/en/simulation/' %}
   {% assign cvfile = '/assets/cv/Felipe_Carreno_CV_EN.pdf' %}
 {% else %}
   {% assign u_res = '/investigacion/' %}{% assign u_pub = '/publicaciones/' %}
   {% assign u_tea = '/docencia/' %}{% assign u_cv = '/cv/' %}{% assign u_con = '/contacto/' %}
+  {% assign u_sim = '/simulacion/' %}
   {% assign cvfile = '/assets/cv/Felipe_Carreno_CV_ES.pdf' %}
 {% endif %}
 
@@ -104,6 +106,10 @@ layout: default
       </article>
       {% endfor %}
     </div>
+
+    <p class="section__cta">
+      <a class="btn btn--outline" href="{{ u_sim | relative_url }}">{{ t.sim.home_cta }} &rarr;</a>
+    </p>
   </div>
 </section>
 

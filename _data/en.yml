@@ -6,6 +6,7 @@ nav:
   teaching: "Teaching"
   cv: "CV"
   contact: "Contact"
+  sim: "Simulation"
 
 home:
   hero_kicker: "Universidad de los Andes · Santiago, Chile"
@@ -180,6 +181,7 @@ sim:
     solution. It is a 2D bed, so the porosities are not comparable with those of a
     sphere packing.
   link: "Try the simulation"
+  home_cta: "See the flow inside a packed bed"
   js:
     niveles: ["none", "slight", "medium", "high", "very high"]
     empaques: ["loose", "medium", "dense"]
@@ -189,3 +191,4 @@ sim:
     acumulando: "collecting tracer…"
     notaNormal: "Built live from the particles as they leave."
     notaColmatado: "No percolation: no tracer comes out."
+    dec: "."

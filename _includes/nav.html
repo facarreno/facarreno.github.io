@@ -6,6 +6,7 @@
   {% assign u_tea  = '/en/teaching/' %}
   {% assign u_cv   = '/en/cv/' %}
   {% assign u_con  = '/en/contact/' %}
+  {% assign u_sim  = '/en/simulation/' %}
 {% else %}
   {% assign u_home = '/' %}
   {% assign u_res  = '/investigacion/' %}
@@ -13,6 +14,7 @@
   {% assign u_tea  = '/docencia/' %}
   {% assign u_cv   = '/cv/' %}
   {% assign u_con  = '/contacto/' %}
+  {% assign u_sim  = '/simulacion/' %}
 {% endif %}
 
 <header class="site-header">
@@ -29,6 +31,7 @@
 
       <ul class="nav__links" id="nav-links">
         <li><a href="{{ u_res | relative_url }}" {% if page.url contains 'investigacion' or page.url contains 'research' %}class="is-active"{% endif %}>{{ t.nav.research }}</a></li>
+        <li><a href="{{ u_sim | relative_url }}" {% if page.url contains 'simula' %}class="is-active"{% endif %}>{{ t.nav.sim }}</a></li>
         <li><a href="{{ u_pub | relative_url }}" {% if page.url contains 'publica' %}class="is-active"{% endif %}>{{ t.nav.publications }}</a></li>
         <li><a href="{{ u_tea | relative_url }}" {% if page.url contains 'docencia' or page.url contains 'teaching' %}class="is-active"{% endif %}>{{ t.nav.teaching }}</a></li>
         <li><a href="{{ u_cv | relative_url }}" {% if page.url contains '/cv' %}class="is-active"{% endif %}>{{ t.nav.cv }}</a></li>

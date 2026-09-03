@@ -336,3 +336,5 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
   .site-header, .site-footer, .hero__actions, .cta { display: none; }
   body { font-size: 11pt; }
 }
+
+.section__cta { margin: 2rem 0 0; text-align: center; }

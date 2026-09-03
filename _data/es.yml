@@ -6,6 +6,7 @@ nav:
   teaching: "Docencia"
   cv: "CV"
   contact: "Contacto"
+  sim: "Simulación"
 
 home:
   hero_kicker: "Universidad de los Andes · Santiago, Chile"
@@ -180,6 +181,7 @@ sim:
     de la RTD; no reemplaza a un CFD de verdad. Es un lecho 2D, así que las
     porosidades no son comparables con las de un lecho de esferas.
   link: "Probar la simulación"
+  home_cta: "Ver el flujo dentro de un lecho empacado"
   js:
     niveles: ["ninguna", "leve", "media", "alta", "muy alta"]
     empaques: ["suelto", "medio", "denso"]
@@ -189,3 +191,4 @@ sim:
     acumulando: "acumulando trazador…"
     notaNormal: "Se construye en vivo con las partículas que van saliendo."
     notaColmatado: "Sin percolación: no hay trazador que salga."
+    dec: ","
