@@ -41,6 +41,7 @@
 
 - id: hydrodynamics
   icon: flow
+  demo: true      # muestra el enlace al panel interactivo
   title:
     es: "Hidrodinámica de biofiltros y biorreactores"
     en: "Hydrodynamics of biofilters and bioreactors"

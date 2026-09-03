@@ -137,3 +137,55 @@ ui:
   back_home: "Volver al inicio"
   updated: "Última actualización"
   skip: "Saltar al contenido"
+
+sim:
+  eyebrow: "Simulación interactiva"
+  title: "El flujo dentro de un lecho empacado"
+  lead: >-
+    Mueve los controles y mira qué le pasa al fluido. Cada estado del lecho está
+    resuelto de antemano: el campo de presión sale de ∇·(k∇p) = 0 en una malla de
+    640×384, y el trazador se advecta sobre ese campo en tu navegador, en vivo.
+  bed_label: "Campo de velocidad en el lecho empacado"
+  clogged_title: "Lecho colmatado"
+  clogged_body: "La biopelícula cerró todas las gargantas: ya no hay camino continuo de entrada a salida."
+  slow: "lento"
+  fast: "rápido"
+  scale_note: "velocidad intersticial"
+  bio_label: "Espesor de biopelícula"
+  bio_none: "ninguna"
+  bio_help: "Engorda cada grano. Estrangula las gargantas y, pasado cierto punto, corta el paso."
+  pack_label: "Empaque"
+  pack_mid: "medio"
+  pack_help: "Tres lechos distintos, del más suelto al más denso. Cambia la geometría, no el fluido."
+  pe_label: "Caudal · Péclet"
+  pe_help: >-
+    El campo no cambia con el caudal: el problema es lineal. Lo que cambia es
+    cuánto alcanza a homogeneizar la difusión.
+  read_poro: "Porosidad"
+  read_perm: "Permeabilidad"
+  read_perm_sub: "de la inicial"
+  read_peak: "Velocidad máxima"
+  read_peak_sub: "la media"
+  read_n: "Tanques en serie"
+  read_n_sub: "de la RTD"
+  rtd_title: "Distribución de tiempos de residencia"
+  rtd_note: "Se construye en vivo con las partículas que van saliendo."
+  caveat_title: "Qué es y qué no es."
+  caveat: >-
+    Es una solución numérica real, no una ilustración: volúmenes finitos, medias
+    armónicas en las caras y un campo de velocidad conservativo. Pero resuelve
+    flujo de Darcy en un medio de permeabilidad heterogénea, no Stokes a escala de
+    poro: hay deslizamiento en la superficie del grano y no hay corte viscoso
+    dentro del poro. Reproduce bien la canalización, las zonas muertas y la forma
+    de la RTD; no reemplaza a un CFD de verdad. Es un lecho 2D, así que las
+    porosidades no son comparables con las de un lecho de esferas.
+  link: "Probar la simulación"
+  js:
+    niveles: ["ninguna", "leve", "media", "alta", "muy alta"]
+    empaques: ["suelto", "medio", "denso"]
+    deLaInicial: "de la inicial"
+    laMedia: "la media"
+    deLaRTD: "de la RTD"
+    acumulando: "acumulando trazador…"
+    notaNormal: "Se construye en vivo con las partículas que van saliendo."
+    notaColmatado: "Sin percolación: no hay trazador que salga."

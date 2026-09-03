@@ -1,0 +1,71 @@
+---
+layout: default
+---
+{% assign t = site.data[page.lang] %}
+{% assign L = page.lang %}
+{% assign s = t.sim %}
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">{{ s.eyebrow }}</p>
+    <h1>{{ s.title }}</h1>
+    <p>{{ s.lead }}</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap sim">
+
+    <div class="lecho">
+      <canvas id="bed" width="1280" height="768" aria-label="{{ s.bed_label }}"></canvas>
+      <div class="aviso" id="aviso"><div>{{ s.clogged_title }}
+        <small>{{ s.clogged_body }}</small></div></div>
+      <div class="escala">
+        <span>{{ s.slow }}</span><span class="rampa"></span><span>{{ s.fast }}</span>
+        <span style="color:var(--faint)">· {{ s.scale_note }}</span>
+      </div>
+    </div>
+
+    <div class="riel">
+      <div class="ctrl">
+        <label for="s-bio">{{ s.bio_label }} <output id="o-bio">{{ s.bio_none }}</output></label>
+        <input type="range" id="s-bio" min="0" max="4" step="1" value="0">
+        <p>{{ s.bio_help }}</p>
+      </div>
+      <div class="ctrl">
+        <label for="s-emp">{{ s.pack_label }} <output id="o-emp">{{ s.pack_mid }}</output></label>
+        <input type="range" id="s-emp" min="0" max="2" step="1" value="1">
+        <p>{{ s.pack_help }}</p>
+      </div>
+      <div class="ctrl">
+        <label for="s-pe">{{ s.pe_label }} <output id="o-pe">Pe 300</output></label>
+        <input type="range" id="s-pe" min="0" max="4" step="1" value="2">
+        <p>{{ s.pe_help }}</p>
+      </div>
+    </div>
+
+    <div class="abajo">
+      <dl class="lecturas">
+        <div class="dato"><dt>{{ s.read_poro }}</dt><dd id="d-poro">—</dd></div>
+        <div class="dato" id="c-perm"><dt>{{ s.read_perm }}</dt>
+          <dd id="d-perm">—<small>{{ s.read_perm_sub }}</small></dd></div>
+        <div class="dato" id="c-pico"><dt>{{ s.read_peak }}</dt>
+          <dd id="d-pico">—<small>{{ s.read_peak_sub }}</small></dd></div>
+        <div class="dato"><dt>{{ s.read_n }}</dt>
+          <dd id="d-n">—<small>{{ s.read_n_sub }}</small></dd></div>
+      </dl>
+
+      <div class="rtd">
+        <h2>{{ s.rtd_title }}</h2>
+        <p id="rtd-nota">{{ s.rtd_note }}</p>
+        <canvas id="chart" width="900" height="420" aria-label="{{ s.rtd_title }}"></canvas>
+      </div>
+    </div>
+
+    <p class="sim-nota"><strong>{{ s.caveat_title }}</strong> {{ s.caveat }}</p>
+  </div>
+</section>
+
+<script id="sim-i18n" type="application/json">{{ s.js | jsonify }}</script>
+<script src="{{ '/assets/sim/lecho.js' | relative_url }}"
+        data-base="{{ '/assets/sim/lecho/' | relative_url }}" defer></script>

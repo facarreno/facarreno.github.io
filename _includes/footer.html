@@ -2,9 +2,11 @@
 {% if page.lang == 'en' %}
   {% assign f_res = '/en/research/' %}{% assign f_pub = '/en/publications/' %}
   {% assign f_tea = '/en/teaching/' %}{% assign f_cv = '/en/cv/' %}{% assign f_con = '/en/contact/' %}
+  {% assign f_sim = '/en/simulation/' %}
 {% else %}
   {% assign f_res = '/investigacion/' %}{% assign f_pub = '/publicaciones/' %}
   {% assign f_tea = '/docencia/' %}{% assign f_cv = '/cv/' %}{% assign f_con = '/contacto/' %}
+  {% assign f_sim = '/simulacion/' %}
 {% endif %}
 
 <footer class="site-footer">
@@ -22,6 +24,7 @@
           <li><a href="{{ f_pub | relative_url }}">{{ t.nav.publications }}</a></li>
           <li><a href="{{ f_tea | relative_url }}">{{ t.nav.teaching }}</a></li>
           <li><a href="{{ f_cv | relative_url }}">{{ t.nav.cv }}</a></li>
+          <li><a href="{{ f_sim | relative_url }}">{{ t.sim.title }}</a></li>
         </ul>
       </div>
 

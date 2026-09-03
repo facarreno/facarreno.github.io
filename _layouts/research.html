@@ -25,6 +25,10 @@ layout: default
       <div class="research-block__body">
         <p><strong>{{ line.summary[L] }}</strong></p>
         {{ line.body[L] | markdownify }}
+        {% if line.demo %}
+        {% if L == 'en' %}{% assign u_sim = '/en/simulation/' %}{% else %}{% assign u_sim = '/simulacion/' %}{% endif %}
+        <p><a class="btn btn--outline" href="{{ u_sim | relative_url }}">{{ t.sim.link }} →</a></p>
+        {% endif %}
       </div>
     </article>
     {% endfor %}

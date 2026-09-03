@@ -137,3 +137,55 @@ ui:
   back_home: "Back to home"
   updated: "Last updated"
   skip: "Skip to content"
+
+sim:
+  eyebrow: "Interactive simulation"
+  title: "Flow inside a packed bed"
+  lead: >-
+    Move the controls and watch what happens to the fluid. Every state of the bed
+    is solved beforehand: the pressure field comes from ∇·(k∇p) = 0 on a 640×384
+    grid, and the tracer is advected over that field in your browser, live.
+  bed_label: "Velocity field in the packed bed"
+  clogged_title: "Bed clogged"
+  clogged_body: "Biofilm has closed every throat: there is no longer a continuous path from inlet to outlet."
+  slow: "slow"
+  fast: "fast"
+  scale_note: "interstitial velocity"
+  bio_label: "Biofilm thickness"
+  bio_none: "none"
+  bio_help: "Thickens every grain. It squeezes the throats and, past a point, cuts the path off."
+  pack_label: "Packing"
+  pack_mid: "medium"
+  pack_help: "Three different beds, from the loosest to the densest. The geometry changes, the fluid does not."
+  pe_label: "Flow rate · Péclet"
+  pe_help: >-
+    The field does not change with flow rate: the problem is linear. What changes
+    is how much diffusion manages to even out.
+  read_poro: "Porosity"
+  read_perm: "Permeability"
+  read_perm_sub: "of the initial"
+  read_peak: "Peak velocity"
+  read_peak_sub: "the mean"
+  read_n: "Tanks in series"
+  read_n_sub: "from the RTD"
+  rtd_title: "Residence time distribution"
+  rtd_note: "Built live from the particles as they leave."
+  caveat_title: "What it is and what it is not."
+  caveat: >-
+    It is a real numerical solution, not an illustration: finite volumes, harmonic
+    face averages and a conservative velocity field. But it solves Darcy flow in a
+    heterogeneous permeability medium, not pore-scale Stokes: there is slip at the
+    grain surface and no viscous shear inside the pore. It reproduces channelling,
+    dead zones and the shape of the RTD well; it does not replace a proper CFD
+    solution. It is a 2D bed, so the porosities are not comparable with those of a
+    sphere packing.
+  link: "Try the simulation"
+  js:
+    niveles: ["none", "slight", "medium", "high", "very high"]
+    empaques: ["loose", "medium", "dense"]
+    deLaInicial: "of the initial"
+    laMedia: "the mean"
+    deLaRTD: "from the RTD"
+    acumulando: "collecting tracer…"
+    notaNormal: "Built live from the particles as they leave."
+    notaColmatado: "No percolation: no tracer comes out."
